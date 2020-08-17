@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<head>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PPZPQ6');</script>
+  <!-- End Google Tag Manager -->
+    <title>Section 2 - Troubleshoot basic hardware issues</title>
+  
+
+  <meta charset="utf-8">
+  <!-- Twitter Bootstrap viewport setting -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- F5 metadata -->
+  <meta name="title" content="Section 2 - Troubleshoot basic hardware issues"/>
+  <meta name="product" content="Unofficial - F5 Certification Exam Prep Material"/>
+  <meta name="version" content=""/>
+  <meta name="updated_date"  content="2020-08-13 09:31:44"/>
+  <meta name="archived" content="Archived documents excluded"/>
+  <meta name="doc_type" content="Manual"/>
+  <meta name="lifecycle" content="release"/>
+  <meta name="Unofficial - F5 Certification Exam Prep Material" content=""/>
+
+
+  
+
+  
+  <link href="https://cdn.f5.com/favicon.ico" rel="icon">
+
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Section 2 - Troubleshoot basic hardware issues &#8212; Unofficial - F5 Certification Exam Prep Material  documentation</title>
+    <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5_agility_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/CoveoFullSearch.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/21fb8a09c3.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Section 3 - Troubleshoot basic performance issues" href="module3.html" />
+    <link rel="prev" title="Section 1 - Troubleshoot basic virtual server Connectivity issues" href="module1.html" /> 
+  </head><body>
+  <div id="clouddocs-header"></div>
+
+    <div id="sidebar" class="section-nav">
+      
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
+      <nav class="nav-sidebartoc">
+
+        
+         <h5>Unofficial - F5 Certification Exam Prep Material  </h5>
+        
+
+        <hr>
+        <span class="nav-sidebartoc">
+            <p class="caption"><span class="caption-text">Intro:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Getting Started with the F5 Certification Program 03/29/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 101 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class1/class1.html">F5 101 - App Delivery Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 201 Certification Exam Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../class2.html">F5 201 - TMOS Administration Study Guide 11/01/19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../class3/class3.html">F5 201 - TMOS Administration Labs 08/11/2020</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 202 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class4/class4.html">F5 202 - Pre-Sales Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301A Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class5/class5.html">F5 301A - BIG-IP LTM Specialist: Architect, Set-Up &amp; Deploy Study Guide 11/01/19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../class6/class6.html">F5 301A - BIG-IP LTM Specialist Labs 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301B Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class7/class7.html">F5 301B - BIG-IP LTM Specialist: Maintain and Troubleshoot Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 302 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class9/class9.html">F5 302 - BIG-IP DNS Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 303 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class11/class11.html">F5 303 - BIG-IP ASM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 304 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class13/class13.html">F5 304 - BIG-IP APM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 401 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class15/class15.html">F5 401 - Security Solution Expert Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 402 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class17/class17.html">F5 402 - Cloud Solutions Study Guide 11/01/19</a></li>
+</ul>
+
+        </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
+<hr>
+  <span class="nav-sidebartoc">
+ <!-- insert content here -->
+  </span>
+      </nav>
+    </div>
+
+
+    <div id="right-sidebar">
+      <h7 style="font-weight:normal">On this page:</h7>
+      <nav class="nav-sidebartoc">
+        <span class="nav-sidebartoc">
+            <ul>
+<li><a class="reference internal" href="#">Section 2 - Troubleshoot basic hardware issues</a><ul>
+<li><a class="reference internal" href="#objective-2-01-perform-an-end-user-diagnostic-per-f5-documentation-and-collect-the-output">Objective - 2.01 Perform an End User Diagnostic per F5 documentation and collect the output</a></li>
+<li><a class="reference internal" href="#objective-2-02-interpret-the-lcd-warning-messages">Objective - 2.02 Interpret the LCD Warning Messages</a></li>
+<li><a class="reference internal" href="#objective-2-03-identify-a-possible-hardware-issue-within-the-log-files">Objective - 2.03 Identify a possible hardware issue within the log files</a></li>
+<li><a class="reference internal" href="#objective-2-04-force-an-active-unit-to-standby-under-the-appropriate-circumstances">Objective - 2.04 Force an active unit to standby under the appropriate circumstances</a></li>
+<li><a class="reference internal" href="#objective-2-05-understand-the-relationship-between-interfaces-trunks-vlans-and-their-status-statistics">Objective - 2.05 Understand the relationship between interfaces, trunks, VLANs and their status/statistics</a></li>
+</ul>
+</li>
+</ul>
+
+         </span>
+      </nav>
+    </div>
+
+
+
+
+
+  
+  <div class="main active" id="content" >
+    <article class="docs-container site-article-inner">
+              <!-- custom breadcrumb -->
+        <h5>
+            <a href="../../index.html">Unofficial - F5 Certification Exam Prep Material</a>
+              &gt; <a href="../class2.html">F5 201 - TMOS Administration Study Guide 11/01/19</a>
+
+          <span class="right">
+             <a href="../../_sources/class2/modules/module2.rst.txt" rel="nofollow">Source</a> |
+             <a href="https://github.com/leifbr/f5-agility-labs-cert">Edit on <i class="fa fa-github" aria-hidden="true"></i></a>
+          </span>
+        </h5>
+        <!-- end custom breadcrumb -->
+      
+
+
+    <!--a title="Export PDF" id="export-pdf" class="btn btn btn-link pull-right">View PDF</a-->
+    <button type="button" id="export-pdf" class="btn btn-link right">PDF</button>
+
+
+    
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
+
+
+     <div role="main">
+        
+  <div class="section" id="section-2-troubleshoot-basic-hardware-issues">
+<h1>Section 2 - Troubleshoot basic hardware issues<a class="headerlink" href="#section-2-troubleshoot-basic-hardware-issues" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="objective-2-01-perform-an-end-user-diagnostic-per-f5-documentation-and-collect-the-output">
+<h2>Objective - 2.01 Perform an End User Diagnostic per F5 documentation and collect the output<a class="headerlink" href="#objective-2-01-perform-an-end-user-diagnostic-per-f5-documentation-and-collect-the-output" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>2.01 - Reboot an F5 platform into the EUD</strong></p>
+<p><a class="reference external" href="http://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/related/EUD_11_4.html">http://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/related/EUD_11_4.html</a></p>
+<p>You can run the EUD only from a console connected to the BIG-IP system.
+You can start the EUD using the following methods:</p>
+<ul class="simple">
+<li>Attach a USB CDROM drive containing the bootable system CD. As the
+system boots up, the EUD starts.</li>
+<li>Attach a USB mass storage device drive with the EUD boot image
+loaded. As the system boots up, the EUD starts.</li>
+<li>While the system is booting, select the End User Diagnostics option
+from the boot menu.</li>
+</ul>
+<p>You can then run the tests that are necessary.</p>
+<p>After you have completed the tests you want to run, use option 21 to
+exit the EUD and reboot the system. You must use this option to exit the
+EUD. Using other methods, such as rebooting or using the command menu,
+can destabilize the system.</p>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>2.01 - Download output from the unit an EUD was run on</strong></p>
+<p><a class="reference external" href="http://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/related/EUD_11_4.html">http://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/related/EUD_11_4.html</a></p>
+<p>An End User Diagnostic or EUD report log is stored as a text file named
+eud.log in the /shared/log/ directory on the host file system.</p>
+<p>If you have run an EUD Test on the system it will be available in this
+location. You can connect to the console IP address of the BIG-IP system
+and use and SCP tool to get the file off of the system, to upload to the
+F5 Support case.</p>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>2.01 - Interpret the output from an EUD and determine if the test
+passed or failed</strong></p>
+<p><a class="reference external" href="http://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/related/EUD_11_4.html">http://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/related/EUD_11_4.html</a></p>
+<p>When all tests complete correctly, the following message displays:</p>
+<p><em>Completed test with 0 errors</em>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-2-02-interpret-the-lcd-warning-messages">
+<h2>Objective - 2.02 Interpret the LCD Warning Messages<a class="headerlink" href="#objective-2-02-interpret-the-lcd-warning-messages" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>2.02 - Locate the LCD on an F5 Platform</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/platform-b5000/2.html#c_reuse_about_lcd_panel">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/platform-b5000/2.html
+-
+c_reuse_about_lcd_panel</a></p>
+<p>On the front of the platform, you can reset the unit using the LCD
+control buttons. You can also use the front-panel LEDs to assess the
+condition of the platform. On the back, you can power off the unit.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../_images/p11.png" src="../../_images/p11.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Front view of the 5000 platform</p>
+<ol class="arabic simple">
+<li>Management 10/100/1000 Ethernet port</li>
+<li>USB ports</li>
+<li>Console serial port</li>
+<li>Serial (hard-wired) failover port</li>
+<li>10/100/1000 interfaces</li>
+<li>1G/10G optical ports</li>
+<li>Indicator LEDs</li>
+<li>LCD display</li>
+<li>LCD control buttons</li>
+</ol>
+<p>The liquid crystal display, or LCD panel, provides the ability to
+control the unit without attaching a console or network cable.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../_images/p12.png" src="../../_images/p12.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The LCD panel is located on the front of all F5 hardware except for the
+Viprion 2400 Series Chassis. A separate USB attachable LCD panel is
+available for the Viprion 2400 Series Chassis.</p>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>2.02 - Correlate the LCD message to message in the corresponding log
+file</strong></p>
+<p><a class="reference external" href="http://support.f5.com/kb/en-us/solutions/public/4000/200/sol4263.html">http://support.f5.com/kb/en-us/solutions/public/4000/200/sol4263.html</a></p>
+<p>Alert conditions</p>
+<p>Alerts that affect the behavior of the Alarm LED indicator are defined
+in the /etc/alertd/alert.conf file. The lcdwarn function of an alert
+definition defines which alerts will modify the Alarm LED indicator.</p>
+<p>As an example, the default alertd process conditions in BIG-IP version
+9.2 are defined in the following table:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="26%" />
+<col width="24%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Description</td>
+<td>Alert Level</td>
+<td>LED behavior</td>
+</tr>
+<tr class="row-even"><td>CPU Temp too high</td>
+<td>3 - Critical</td>
+<td>Solid Red</td>
+</tr>
+<tr class="row-odd"><td>CPU fan too slow</td>
+<td>3 - Critical</td>
+<td>Solid Red</td>
+</tr>
+<tr class="row-even"><td>CPU fan bad</td>
+<td>3 - Critical</td>
+<td>Solid Red</td>
+</tr>
+<tr class="row-odd"><td>Chassis Temp too high</td>
+<td>3 - Critical</td>
+<td>Solid Red</td>
+</tr>
+<tr class="row-even"><td>Chassis Fan bad</td>
+<td>3 - Critical</td>
+<td>Solid Red</td>
+</tr>
+<tr class="row-odd"><td>Power Supply bad</td>
+<td>4 - Emergency</td>
+<td>Blink Red</td>
+</tr>
+<tr class="row-even"><td>Unit going standby</td>
+<td>0 - Warning</td>
+<td>Solid Yellow</td>
+</tr>
+<tr class="row-odd"><td>Unit going Active</td>
+<td>0 - Warning</td>
+<td>Solid Yellow</td>
+</tr>
+<tr class="row-even"><td>The license validation failed</td>
+<td>2 - Alert</td>
+<td>Solid Red</td>
+</tr>
+<tr class="row-odd"><td>The license has expired</td>
+<td>2 - Alert</td>
+<td>Solid Red</td>
+</tr>
+<tr class="row-even"><td>Blocking DoS attack</td>
+<td>2 - Alert</td>
+<td>Solid Red</td>
+</tr>
+<tr class="row-odd"><td>Hard disk is failing</td>
+<td>4 - Emergency</td>
+<td>Blink Red</td>
+</tr>
+</tbody>
+</table>
+<p>The events that trigger LCD screen events and lights are written to log
+files. You may want to look up more information on the logged events.
+For example, the BIG-IP system may generate an error messages to the
+/var/log/ltm file that contains the following event:</p>
+<ul class="simple">
+<li>emerg system_check[11277]: 010d0010:0: Power supply #2 fan-1: fan
+speed (0) is too low.</li>
+</ul>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>2.02 - Identify which tasks the buttons on the LCD perform</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/pg-10200v/2.html#c_reuse_about_lcd_panel">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/pg-10200v/2.html - c_reuse_about_lcd_panel</a></p>
+<p>Pressing the X button puts the LCD panel in Menu. The buttons Left
+Arrow, Right Arrow, Up Arrow, and Down Arrow are only functional when
+the LCD is in Menu mode for navigation. The ✔ check button is used to
+select and confirm selections.</p>
+<p>Please refer to the Hyperlink to review the menu options available on
+the LCD Panel</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-2-03-identify-a-possible-hardware-issue-within-the-log-files">
+<h2>Objective - 2.03 Identify a possible hardware issue within the log files<a class="headerlink" href="#objective-2-03-identify-a-possible-hardware-issue-within-the-log-files" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>2.03 - Indicate which logs would contain debugging information</strong></p>
+<p><a class="reference external" href="http://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/11.html">http://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/11.html</a></p>
+<p>If you are using the Syslog utility for local logging, whether or not
+you are using the high-speed logging mechanism you can view and manage
+the log messages, using the BIG-IP Configuration utility.</p>
+<p>The local Syslog logs that the BIG-IP system can generate include
+several types of information. For example, some logs show a timestamp,
+host name, and service for each event. Moreover, logs sometimes include
+a status code, while the audit log shows a user name and a transaction
+ID corresponding to each configuration change. All logs contain a
+one-line description of each event.</p>
+<p>For local log messages that the BIG-IP system stores in the local Syslog
+data base, the BIG-IP system automatically stores and displays log
+messages in these categories:</p>
+<ul class="simple">
+<li>System messages</li>
+<li>Packet filter messages</li>
+<li>Local Traffic messages</li>
+<li>Global Traffic messages</li>
+<li>BIG-IP system configuration (audit) messages</li>
+</ul>
+<p>Each type of event is stored locally in a separate log file, and the
+information stored in each log file varies depending on the event type.
+All log files for these event types are in the directory /var/log.</p>
+<p>The product specific logs like /var/log/ltm, var/log/gtm, etc will
+contain debug info relative to that product. If you are logging from an
+irule you can define what log file you want to write your debug info
+into by specifying the local facility you chose.</p>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>2.03 - Given a log file, determine the nature of a hardware issue</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/11.html#conceptid">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/11.html
+-
+conceptid</a></p>
+<p>This blueprint topic is related to choosing the correct answer for a
+scenario type of question. For most questions like these you must have
+exposure to supporting the BIG-IP platform in a production environment
+or understand many of the different issues that may arise around the
+topic and the best practice method of solving the issue. Hands-on study
+is the best way to master these types of topics.</p>
+<p>You may look in the logs and see there are may events. Perhaps you
+notice an event like this:</p>
+<p>Mon Feb 14 o4:36:06 PST 2005 bigip2 bcm56xxd(785) 00010012 Link 2.5 is up</p>
+<p>This could have been caused by the administrator turning up a new
+interface or because the interface lost connectivity to the upstream
+switch. Some events can be self-explanatory while others may be more
+cryptic and need some deciphering.</p>
+<p><strong>Understanding log content</strong></p>
+<p>The logs that the BIG-IP system generates include several types of
+information. For example, some logs show a timestamp, host name, and
+service for each event. Moreover, logs sometimes include a status code,
+while the audit log shows a user name and a transaction ID corresponding
+to each configuration change. All logs contain a 1-line description of
+each event.</p>
+<p>The table below lists the categories of information contained in the
+logs and the specific logs in which the information is displayed.</p>
+<p>Log information categories and their descriptions</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="83%" />
+<col width="8%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Information Type</td>
+<td>Explanation</td>
+<td>Log Type</td>
+</tr>
+<tr class="row-even"><td>Timestamp</td>
+<td>The time and date that the system logged the event message.</td>
+<td><p class="first">System</p>
+<p>Packet Filter</p>
+<p>Local Traffic</p>
+<p class="last">Audit</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Host name</td>
+<td>The host name of the system that logged the event message. Because this is typically the host name of the local machine, the appearance of a remote host name could be of interest.</td>
+<td><p class="first">System</p>
+<p>Packet Filter</p>
+<p class="last">Local Traffic</p>
+</td>
+</tr>
+<tr class="row-even"><td>Service</td>
+<td>The service that generated the event.</td>
+<td><p class="first">System</p>
+<p>Packet Filter</p>
+<p class="last">Local Traffic</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Status code</td>
+<td>The status code associated with the event. Note that only events logged by BIG-IP system components, and not Linux system services, have status codes.</td>
+<td><p class="first">Packet Filter</p>
+<p class="last">Local Traffic</p>
+</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>The description of the event that caused the system to log the message.</td>
+<td><p class="first">System</p>
+<p>Packet Filter</p>
+<p class="last">Local Traffic</p>
+</td>
+</tr>
+<tr class="row-odd"><td>User Name</td>
+<td>The name of the user who made the configuration change.</td>
+<td>Audit</td>
+</tr>
+<tr class="row-even"><td>Transaction ID</td>
+<td>The identification number of the configuration change.</td>
+<td>Audit</td>
+</tr>
+<tr class="row-odd"><td>Event</td>
+<td>A description of the configuration change that caused the system to log the message.</td>
+<td>Audit</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>2.03 - Given a possible issue, determine which log file entries to review</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/11.html#conceptid">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/11.html - conceptid</a></p>
+<p>Viewing and managing log messages are an important part of maintaining a
+BIG-IP system. Log messages inform you on a regular basis of the events
+that are happening on the system. Some of these events pertain to
+general events happening within the operating system, while other events
+are specific to the BIG-IP system, such as the stopping and starting of
+BIG-IP system services.</p>
+<p>The mechanism that the BIG-IP system uses to log events is the Linux
+utility syslog-ng. The syslog-ng utility is an enhanced version of the
+standard UNIX and Linux logging utility syslog.</p>
+<p>The types of events that the BIG-IP system logs are:</p>
+<p><strong>System events</strong></p>
+<p>System event messages are based on Linux events, and are not specific to
+the BIG-IP system.</p>
+<p><strong>Packet filter events</strong></p>
+<p>Packet filter messages are those that result from the implementation of
+packet filters and packet-filter rules.</p>
+<p><strong>Local traffic events</strong></p>
+<p>Local-traffic event messages pertain specifically to the local traffic
+management system.</p>
+<p><strong>Audit events</strong></p>
+<p>Audit event messages are those that the BIG-IP system logs as a result
+of changes to the BIG-IP system configuration. Logging audit events is
+optional.</p>
+<p>To configure and manage event logging, log in to the BIG-IP
+Configuration utility, and on the Main tab, expand System, and click
+Logs.</p>
+<p>As described in Introducing BIG-IP system logging, the BIG-IP system
+automatically logs four main event types: system, packet filter, local
+traffic, and configuration changes (audit). Each type of event is stored
+in a separate log file, and the information stored in each log file
+varies depending on the event type. All log files for these event types
+are in the directory /var/log.</p>
+<p><strong>Logging system events</strong></p>
+<p>Many events that occur on the BIG-IP system are Linux-related events,
+and do not specifically apply to the BIG-IP system.</p>
+<p>Using the Configuration utility, you can display these system messages.
+The table below shows some sample system log entries.</p>
+<p>Sample system log entries</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="9%" />
+<col width="17%" />
+<col width="45%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Timestamp</td>
+<td>Host</td>
+<td>Service</td>
+<td>Event</td>
+</tr>
+<tr class="row-even"><td>Mon Feb 14 03:34:45 PST 2005</td>
+<td>bigip3</td>
+<td>syslog-ng[5494]</td>
+<td>new configuration initialized</td>
+</tr>
+<tr class="row-odd"><td>Mon Feb 14 03:35:06 PST 2005</td>
+<td>bigip3</td>
+<td>syslog-ng[5494]</td>
+<td>kjournald starting. Commit interval 5 seconds.</td>
+</tr>
+<tr class="row-even"><td>Mon Feb 14 04:38:06 PST 2005</td>
+<td>bigip3</td>
+<td>EXT3-fs</td>
+<td>mounted filesystem with ordered data mode.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Logging packet filter events</strong></p>
+<p>Some of the events that the BIG-IP system logs are related to packet
+filtering. The system logs the messages for these events in the file
+/var/log/pktfilter.</p>
+<p>Using the Configuration utility, you can display these packet filter
+messages.</p>
+<p><strong>Logging local traffic events</strong></p>
+<p>Many of the events that the BIG-IP system logs are related to local area
+traffic passing through the BIG-IP system. The BIG-IP system logs the
+messages for these events in the file /var/log/ltm.</p>
+<p>Using the Configuration utility, you can display these local-traffic
+messages. The table below shows some sample local-traffic log entries.</p>
+<p>Sample local-traffic log entries</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="8%" />
+<col width="14%" />
+<col width="12%" />
+<col width="39%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Timestamp</td>
+<td>Host</td>
+<td>Service</td>
+<td>Status Code</td>
+<td>Event</td>
+</tr>
+<tr class="row-even"><td>Mon Feb 14 03:34:45 PST 2005</td>
+<td>bigip2</td>
+<td>bcm56xxd(785)</td>
+<td>00010013</td>
+<td>Starting packet registry event timer</td>
+</tr>
+<tr class="row-odd"><td>Mon Feb 14 03:35:06 PST 2005</td>
+<td>bigip2</td>
+<td>bcm56xxd(785)</td>
+<td>00010013</td>
+<td>Starting HA heartbeat timer tick</td>
+</tr>
+<tr class="row-even"><td>Mon Feb 14 04:38:06 PST 2005</td>
+<td>bigip2</td>
+<td>bcm56xxd(785)</td>
+<td>00010013</td>
+<td>Successful start. Entering main message loop</td>
+</tr>
+<tr class="row-odd"><td>Mon Feb 14 o4:36:06 PST 2005</td>
+<td>bigip2</td>
+<td>bcm56xxd(785)</td>
+<td>00010012</td>
+<td>Link 2.5 is up</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Some of the specific types of events that the BIG-IP system displays on the Local Traffic logging screen are:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><ul class="first last simple">
+<li>Address Resolution Protocol (ARP) packet and ARP cache events</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li>bigdb database events (such as populating and persisting bigdb variables)</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li>HTTP protocol events</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li>HTTP compression events</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li>IP packet discard events due to exceptional circumstances or invalid parameters (such as a bad checksum)</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li>Layer 4 events (events related to TCP, UDP, and Fast L4 processing)</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li>MCP/TMM configuration events</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li>Monitor configuration events</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li>Network events (Layers 1 and 2)</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li>Packet Velocity ASIC (PVA) configuration events</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li>iRule events related to run-time iRule processing</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li>SSL traffic processing events</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li>General TMM events such as TMM startup and shutdown</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-2-04-force-an-active-unit-to-standby-under-the-appropriate-circumstances">
+<h2>Objective - 2.04 Force an active unit to standby under the appropriate circumstances<a class="headerlink" href="#objective-2-04-force-an-active-unit-to-standby-under-the-appropriate-circumstances" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>2.04 - Force an active unit to standby under the appropriate
+circumstances</strong></p>
+<p><strong>General Network Study and vLabs</strong></p>
+<p>This blueprint topic is related to choosing the correct answer for a
+scenario type of question. For most questions like these you must have
+exposure to supporting the BIG-IP platform in a production environment
+or understand many of the different issues that may arise around the
+topic and the best practice method of solving the issue. Hands-on study
+is the best way to master these types of topics.</p>
+<p>For example:</p>
+<p>If the BIG-IP HA pair is synchronized then the configurations are the
+same on both systems. If the active system is having an issue and you
+can’t find an issue with the other systems in the environment (Client or
+Server). The issue may have something to do with the LTM. You could try
+a fail over of the Active system to the standby system. If the problem
+resolves then you are likely faced with an issue in the first system and
+since they were in sync it may be hardware. That hardware issue may be
+in the LTM or in the network systems that it is connected to. If the
+fail over did not solve the issue the problem is like a configuration
+issue and hardware has been eliminated.</p>
+<p>Since a failover of an HA pair can interrupt current connections of
+clients and depending on the type of connection they may have made their
+connection may not recover from the termination of the connection (if
+connection mirroring is not properly configured for long lived
+connections), using failover as a troubleshooting step should be done as
+a last measure. How ever it can help to narrow down if there is an issue
+with hardware.</p>
+<p>For a failover between systems in an HA pair, to be transparent to the
+clients currently connected to the active unit, the state of the active
+connections need to be known by the standby system. If the connection
+states are not know by the standby system when the failover occurs,
+connections that were being persisted, connections that were being
+SNAT’d or any active connection state know by the active unit will not
+survive the failover. To create a stateful failover environment the
+systems must be configured to mirror the current connection table,
+persistence records and SNAT table to the standby unit.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-2-05-understand-the-relationship-between-interfaces-trunks-vlans-and-their-status-statistics">
+<h2>Objective - 2.05 Understand the relationship between interfaces, trunks, VLANs and their status/statistics<a class="headerlink" href="#objective-2-05-understand-the-relationship-between-interfaces-trunks-vlans-and-their-status-statistics" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>2.05 - Understand the relationship between interfaces, trunks, VLANs
+and their status/statistics</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/12.html#conceptid">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/12.html - conceptid</a></p>
+<p><strong>Introduction to BIG-IP system interfaces</strong></p>
+<p>A key task of the BIG-IP system configuration is the configuration of
+BIG-IP system interfaces. The interfaces on a BIG-IP system are the
+physical ports that you use to connect the BIG-IP system to other
+devices on the network. These other devices can be next-hop routers,
+Layer 2 devices, destination servers, and so on. Through its interfaces,
+the BIG-IP system can forward traffic to or from other network devices.</p>
+<p><em>Note: The term interface refers to the physical ports on the BIG-IP
+system.</em></p>
+<p>Every BIG-IP system includes multiple interfaces. The exact number of
+interfaces that you have on the BIG-IP system depends on the platform
+type.</p>
+<p>A BIG-IP system has two types of interfaces:</p>
+<p><strong>A management interface</strong></p>
+<p>The management interface is a special interface dedicated to performing
+a specific set of system management functions.</p>
+<p><strong>TMM switch interfaces</strong></p>
+<p>TMM switch interfaces are those interfaces that the BIG-IP system uses
+to send or receive application traffic, that is, traffic slated for
+application delivery.</p>
+<p>Each of the interfaces on the BIG-IP system has unique properties, such
+as the MAC address, media speed, duplex mode, and support for Link Layer
+Discovery Protocol (LLDP).</p>
+<p>In addition to configuring interface properties, you can implement a
+feature known as interface mirroring, which you can use to duplicate
+traffic from one or more interfaces to another. You can also view
+statistics about the traffic on each interface.</p>
+<p>Once you have configured the properties of each interface, you can
+configure several other features of the BIG-IP system that control the
+way that interfaces operate. For example, by creating a virtual local
+area network (VLAN) and assigning interfaces to it, the BIG-IP system
+can insert a VLAN ID, or tag, into frames passing through those
+interfaces. In this way, a single interface can forward traffic for
+multiple VLANs.</p>
+<p><strong>Introduction to virtual LANs</strong></p>
+<p>A VLAN is a logical subset of hosts on a local area network (LAN) that
+operate in the same IP address space. Grouping hosts together in a VLAN
+has distinct advantages. For example, with VLANs, you can:</p>
+<p>Reduce the size of broadcast domains, thereby enhancing overall network
+performance.</p>
+<p>Reduce system and network maintenance tasks substantially.
+Functionally-related hosts no longer need to physically reside together
+to achieve optimal network performance.</p>
+<p>Enhance security on your network by segmenting hosts that must transmit
+sensitive data.</p>
+<p>The way that you group hosts into VLANs is by using the Configuration
+utility to create a VLAN and associate physical interfaces with that
+VLAN. In this way, any host that sends traffic to a BIG-IP system
+interface is logically a member of the VLAN or VLANs to which that
+interface belongs.</p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/18.html#unique_599320773">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/18.html - unique_599320773</a></p>
+<p><strong>VLANs on a BIG-IP system</strong></p>
+<p>The BIG-IP system is a port-based switch that includes multilayer
+processing capabilities. These capabilities enhance standard VLAN
+behavior, in these ways:</p>
+<p>You can associate physical interfaces on the BIG-IP system directly with
+VLANs. In this way, you can associate multiple interfaces with a single
+VLAN, or you can associate a single interface with multiple VLANs.</p>
+<p>You do not need physical routers to establish communication between
+separate VLANs. Instead, the BIG-IP system can process messages between
+VLANs.</p>
+<p>You can incorporate a BIG-IP system into existing, multi-vendor switched
+environments, due to the BIG-IP system’s compliance with the IEEE 802.1q
+VLAN standard.</p>
+<p>You can combine two or more VLANs into an object known as a VLAN group.
+With a VLAN group, a host in one VLAN can communicate with a host in
+another VLAN using a combination of Layer 2 forwarding and IP routing.
+This offers both performance and reliability benefits.</p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/17.html#conceptid">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/17.html - conceptid</a></p>
+<p><strong>Introduction to trunks</strong></p>
+<p>A trunk is a logical grouping of interfaces on the BIG-IP system. When
+you create a trunk, this logical group of interfaces functions as a
+single interface. The BIG-IP system uses a trunk to distribute traffic
+across multiple links, in a process known as link aggregation. With link
+aggregation, a trunk increases the bandwidth of a link by adding the
+bandwidth of multiple links together. For example, four fast Ethernet
+(100 Mbps) links, if aggregated, create a single 400 Mbps link.</p>
+<p>With one trunk, you can aggregate a maximum of eight links. For optimal
+performance, you should aggregate links in powers of two. Thus, you
+ideally aggregate two, four, or eight links.</p>
+<p>The purpose of a trunk is two-fold:</p>
+<p>To increase bandwidth without upgrading hardware</p>
+<p>To provide link failover if a member link becomes unavailable</p>
+<p>You can use trunks to transmit traffic from a BIG-IP system to another
+vendor switch. Two systems that use trunks to exchange frames are known
+as peer systems.</p>
+<p>How do trunks work?</p>
+<p>In a typical configuration where trunks are configured, the member links
+of the trunk are connected through Ethernet cables to corresponding
+links on a peer system.</p>
+<p>This figure shows an example of a typical trunk configuration with two
+peers and three member links on each peer:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../_images/p13.jpeg" src="../../_images/p13.jpeg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>A primary goal of the trunks feature is to ensure that frames exchanged
+between peer systems are never sent out of order or duplicated on the
+receiving end. The BIG-IP system is able to maintain frame order by
+using the source and destination addresses in each frame to calculate a
+hash value, and then transmitting all frames with that hash value on the
+same member link.</p>
+<p>The BIG-IP system automatically assigns a unique MAC address to a trunk.
+However, by default, the MAC address that the system uses as the source
+and destination address for frames that the system transmits and
+receives (respectively), is the MAC address of the lowest-numbered
+interface of the trunk.</p>
+<p>The BIG-IP system also uses the lowest-numbered interface of a trunk as
+a reference link. The BIG-IP system uses the reference link to take
+certain aggregation actions, such as implementing the automatic link
+selection policy. For frames coming into the reference link, the BIG-IP
+system load balances the frames across all member links that the BIG-IP
+system knows to be available. For frames going from any link in the
+trunk to a destination host, the BIG-IP system treats those frames as if
+they came from the reference link.</p>
+<p>Finally, the BIG-IP system uses the MAC address of an individual member
+link as the source address for any LACP control frames.</p>
+<p><strong>Overview of LACP</strong></p>
+<p>A key aspect of trunks is Link Aggregation Control Protocol, or LACP.
+Defined by IEEE standard 802.3ad, LACP is a protocol that detects error
+conditions on member links and redistributes traffic to other member
+links, thus preventing any loss of traffic on the failed link. On a
+BIG-IP system, LACP is an optional feature that you can configure.</p>
+<p>You can also customize LACP behavior. For example, you can specify the
+way that LACP communicates its control messages from the BIG-IP system
+to a peer system. You can also specify the rate at which the peer system
+sends LACP packets to the BIG-IP system. If you want to affect the way
+that the BIG-IP system chooses links for link aggregation, you can
+specify a link control policy.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+     </div>
+    
+     <div class="row next-prev-btn-row">
+       <div class="col-lg-12">
+       
+        <a href="module1.html" title="Section 1 - Troubleshoot basic virtual server Connectivity issues" accesskey="p" class="btn btn-primary left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+       
+       
+          <a href="module3.html" title="Section 3 - Troubleshoot basic performance issues" accesskey="n" class="btn btn-primary right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+       
+     </div>
+     </div>
+    
+
+    </article>
+  </div>
+
+</div>
+
+
+  <div id="clouddocs-footer"></div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="../../_static/js/index.js"></script>
+  <script src="../../_static/js/jquery.appear.js"></script>
+  <script src="../../_static/js/printThis.js"></script>
+  <script src="../../_static/js/bootstrap.min.js"></script>
+  <script src="../../_static/js/clouddocs.js"></script>
+  <script src="../../_static/js/CoveoJsSearch.Lazy.min.js"></script>
+  </body>
+</html>

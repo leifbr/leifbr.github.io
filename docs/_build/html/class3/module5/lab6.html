@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<head>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PPZPQ6');</script>
+  <!-- End Google Tag Manager -->
+    <title>Module 6 - Modify and Troubleshoot Pools and Virtual Servers</title>
+  
+
+  <meta charset="utf-8">
+  <!-- Twitter Bootstrap viewport setting -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- F5 metadata -->
+  <meta name="title" content="Module 6 - Modify and Troubleshoot Pools and Virtual Servers"/>
+  <meta name="product" content="Unofficial - F5 Certification Exam Prep Material"/>
+  <meta name="version" content=""/>
+  <meta name="updated_date"  content="2020-08-16 09:30:35"/>
+  <meta name="archived" content="Archived documents excluded"/>
+  <meta name="doc_type" content="Manual"/>
+  <meta name="lifecycle" content="release"/>
+  <meta name="Unofficial - F5 Certification Exam Prep Material" content=""/>
+
+
+  
+
+  
+  <link href="https://cdn.f5.com/favicon.ico" rel="icon">
+
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Module 6 - Modify and Troubleshoot Pools and Virtual Servers &#8212; Unofficial - F5 Certification Exam Prep Material  documentation</title>
+    <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5_agility_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/CoveoFullSearch.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/21fb8a09c3.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="F5 202 - Pre-Sales Fundamentals Study Guide 11/01/19" href="../../class4/class4.html" />
+    <link rel="prev" title="Module 5 - Managing the BIG-IP" href="lab5.html" /> 
+  </head><body>
+  <div id="clouddocs-header"></div>
+
+    <div id="sidebar" class="section-nav">
+      
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
+      <nav class="nav-sidebartoc">
+
+        
+         <h5>Unofficial - F5 Certification Exam Prep Material  </h5>
+        
+
+        <hr>
+        <span class="nav-sidebartoc">
+            <p class="caption"><span class="caption-text">Intro:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Getting Started with the F5 Certification Program 03/29/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 101 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class1/class1.html">F5 101 - App Delivery Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 201 Certification Exam Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../class2/class2.html">F5 201 - TMOS Administration Study Guide 11/01/19</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../class3.html">F5 201 - TMOS Administration Labs 08/11/2020</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 202 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class4/class4.html">F5 202 - Pre-Sales Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301A Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class5/class5.html">F5 301A - BIG-IP LTM Specialist: Architect, Set-Up &amp; Deploy Study Guide 11/01/19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../class6/class6.html">F5 301A - BIG-IP LTM Specialist Labs 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301B Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class7/class7.html">F5 301B - BIG-IP LTM Specialist: Maintain and Troubleshoot Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 302 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class9/class9.html">F5 302 - BIG-IP DNS Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 303 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class11/class11.html">F5 303 - BIG-IP ASM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 304 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class13/class13.html">F5 304 - BIG-IP APM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 401 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class15/class15.html">F5 401 - Security Solution Expert Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 402 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class17/class17.html">F5 402 - Cloud Solutions Study Guide 11/01/19</a></li>
+</ul>
+
+        </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
+<hr>
+  <span class="nav-sidebartoc">
+ <!-- insert content here -->
+  </span>
+      </nav>
+    </div>
+
+
+    <div id="right-sidebar">
+      <h7 style="font-weight:normal">On this page:</h7>
+      <nav class="nav-sidebartoc">
+        <span class="nav-sidebartoc">
+            <ul>
+<li><a class="reference internal" href="#">Module 6 - Modify and Troubleshoot Pools and Virtual Servers</a><ul>
+<li><a class="reference internal" href="#modify-and-troubleshoot-virtual-servers">Modify and Troubleshoot Virtual Servers</a><ul>
+<li><a class="reference internal" href="#troubleshooting-virtual-servers">Troubleshooting virtual servers</a></li>
+<li><a class="reference internal" href="#working-with-profiles">Working with profiles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+         </span>
+      </nav>
+    </div>
+
+
+
+
+
+  
+  <div class="main active" id="content" >
+    <article class="docs-container site-article-inner">
+              <!-- custom breadcrumb -->
+        <h5>
+            <a href="../../index.html">Unofficial - F5 Certification Exam Prep Material</a>
+              &gt; <a href="../class3.html">F5 201 - TMOS Administration Labs 08/11/2020</a>
+              &gt; <a href="module7.html">Appendix I - Answer Key</a>
+
+          <span class="right">
+             <a href="../../_sources/class3/module5/lab6.rst.txt" rel="nofollow">Source</a> |
+             <a href="https://github.com/leifbr/f5-agility-labs-cert">Edit on <i class="fa fa-github" aria-hidden="true"></i></a>
+          </span>
+        </h5>
+        <!-- end custom breadcrumb -->
+      
+
+
+    <!--a title="Export PDF" id="export-pdf" class="btn btn btn-link pull-right">View PDF</a-->
+    <button type="button" id="export-pdf" class="btn btn-link right">PDF</button>
+
+
+    
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
+
+
+     <div role="main">
+        
+  <div class="section" id="module-6-modify-and-troubleshoot-pools-and-virtual-servers">
+<h1>Module 6 - Modify and Troubleshoot Pools and Virtual Servers<a class="headerlink" href="#module-6-modify-and-troubleshoot-pools-and-virtual-servers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="modify-and-troubleshoot-virtual-servers">
+<h2>Modify and Troubleshoot Virtual Servers<a class="headerlink" href="#modify-and-troubleshoot-virtual-servers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="troubleshooting-virtual-servers">
+<h3>Troubleshooting virtual servers<a class="headerlink" href="#troubleshooting-virtual-servers" title="Permalink to this headline">¶</a></h3>
+<p><em>Q1. Where would you start?</em></p>
+<p>I would go on the BIG-IP and test connectivity from the BIG-IP to the
+pool members.</p>
+<p><em>Q2. Attempt to ping one of the pool members. Does it work? What does
+this tell you?</em></p>
+<p>The ping should be successful. This means the server IP is up and I have
+basic connectivity.</p>
+<p><em>Q3. Attempt a</em> <strong>curl -i</strong> <em>against a pool member. Does it work? What does
+this tell you?</em></p>
+<p>The curl should be successful and you should see the request come back.
+The application is running.</p>
+<p><em>Q4. Since the problem affects all pool members, what would you suspect
+as a possible issue?</em></p>
+<p>Since I can see all pool members are functioning I would suspect the
+monitor is the issue. You could start debugging the monitor directly, or
+you could put the default HTTP monitor and see if the pool members
+come up. If they do, then the monitor is the issue and needs correction.
+In the case, you would check the Send and Receive strings. I would use a
+curl -i (to include the header and response codes) to look for the
+receive string. In this case it’s obvious, we are looking for a 200 OK
+(successful reponse), but have fat-finger 020 OK in the Receive box.
+Correct the receive string and reapply the monitor. The pool should come
+up Available (Green).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The default HTTP monitor usually, but does not always, work on an HTTP application.</p>
+</div>
+<p><em>Q5. Did you correct the issue?</em></p>
+<p>Yes</p>
+<p><em>Q6. Now the pool is working and purple_vs is available can you access
+the page through the virtual?</em></p>
+<p>No</p>
+<p><em>Q7. What do you think would be the next step in debugging the issue
+would be?</em></p>
+<p>I would clear the virtual server statistics and try again and see if the
+traffic is hitting purple_vs. The virtual server statistics should show
+traffic being processed.</p>
+<p><em>Q8. What command(s) could you use to watch traffic hit the virtual
+server and leave toward the pool?</em></p>
+<p>I would create two tcpdumps one on the client-side and the other on the
+server-side. I would want to limit the captures to watch for my PC IP
+address 10.1.10.51. You will need two terminal windows.</p>
+<p>Terminal Window 1 (Client to BIG-IP)</p>
+<p><strong>tcpdump -i client_vlan -X -s0 host 10.1.10.51 and 10.1.10.105</strong></p>
+<p>(This command will only watch client-side traffic between the PC and
+virtual server. The -s0 command will dump the entire packet -X command
+will dump hex and ascii code of the packet. You will be able to see the
+HTTP request and response in the dump)</p>
+<p>Terminal Window 2 (BIG-IP to Pool)</p>
+<p><strong>tcpdump -i server_vlan -X -s0 host 10.1.10.51</strong></p>
+<p>(This command will only watch server-side traffic from the PC and to the
+pool. The -s0 command will dump the entire packet -X command will dump
+hex and ascii code of the packet. You will be able to see the HTTP
+request and response in the dump)</p>
+<p><em>Q9. Did you see traffic hit the virtual server? Did you see BIG-IP send
+traffic to a pool member?</em></p>
+<p>You should have seen traffic hit the virtual server in Window 1 and in
+Window 2 BIG-IP should have picked a pool member and sent traffic to it.</p>
+<p><em>Q10. Did you see the return traffic? If there was no response, what is
+your step?</em></p>
+<p>No, you should not have received a response. Because the BIG-IP is not
+the default gateway, so the response went someplace else.</p>
+<ol class="arabic simple">
+<li>You can add and SNAT Pool or do SNAT Automap on the virtual server.</li>
+<li>You can add 10.1.20.240 as a self IP address on the BIG-IP. This
+should be a floating IP in traffic_group_1 so that the default
+gateway for the servers is still available upon failover.</li>
+</ol>
+</div>
+<div class="section" id="working-with-profiles">
+<h3>Working with profiles<a class="headerlink" href="#working-with-profiles" title="Permalink to this headline">¶</a></h3>
+<p><em>Q1. Did site work? Why not?</em></p>
+<p>SSL connection error</p>
+<p><em>Q2. Did site work?</em></p>
+<p>Yes</p>
+<p><em>Q3. What was needed to add cookie persistence?</em></p>
+<p>http profile</p>
+<p><em>Q4. What is the name of the cookie inserted begin with?</em></p>
+<p>BIGipServerwww_pool</p>
+<p><em>Q5. Did site work?</em></p>
+<p>No</p>
+<p><em>Q6. What profile was needed to correct the error?</em></p>
+<p>Server side ssl profile</p>
+</div>
+</div>
+</div>
+
+
+     </div>
+    
+     <div class="row next-prev-btn-row">
+       <div class="col-lg-12">
+       
+        <a href="lab5.html" title="Module 5 - Managing the BIG-IP" accesskey="p" class="btn btn-primary left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+       
+       
+          <a href="../../class4/class4.html" title="F5 202 - Pre-Sales Fundamentals Study Guide 11/01/19" accesskey="n" class="btn btn-primary right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+       
+     </div>
+     </div>
+    
+
+    </article>
+  </div>
+
+</div>
+
+
+  <div id="clouddocs-footer"></div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="../../_static/js/index.js"></script>
+  <script src="../../_static/js/jquery.appear.js"></script>
+  <script src="../../_static/js/printThis.js"></script>
+  <script src="../../_static/js/bootstrap.min.js"></script>
+  <script src="../../_static/js/clouddocs.js"></script>
+  <script src="../../_static/js/CoveoJsSearch.Lazy.min.js"></script>
+  </body>
+</html>

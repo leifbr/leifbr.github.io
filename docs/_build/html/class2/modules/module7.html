@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<head>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PPZPQ6');</script>
+  <!-- End Google Tag Manager -->
+    <title>Section 7 - Maintain system configuration</title>
+  
+
+  <meta charset="utf-8">
+  <!-- Twitter Bootstrap viewport setting -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- F5 metadata -->
+  <meta name="title" content="Section 7 - Maintain system configuration"/>
+  <meta name="product" content="Unofficial - F5 Certification Exam Prep Material"/>
+  <meta name="version" content=""/>
+  <meta name="updated_date"  content="2020-08-13 09:31:44"/>
+  <meta name="archived" content="Archived documents excluded"/>
+  <meta name="doc_type" content="Manual"/>
+  <meta name="lifecycle" content="release"/>
+  <meta name="Unofficial - F5 Certification Exam Prep Material" content=""/>
+
+
+  
+
+  
+  <link href="https://cdn.f5.com/favicon.ico" rel="icon">
+
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Section 7 - Maintain system configuration &#8212; Unofficial - F5 Certification Exam Prep Material  documentation</title>
+    <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5_agility_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/CoveoFullSearch.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/21fb8a09c3.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Section 8 - Manage existing system and application services" href="module8.html" />
+    <link rel="prev" title="Section 6 - Identify and report current device status" href="module6.html" /> 
+  </head><body>
+  <div id="clouddocs-header"></div>
+
+    <div id="sidebar" class="section-nav">
+      
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
+      <nav class="nav-sidebartoc">
+
+        
+         <h5>Unofficial - F5 Certification Exam Prep Material  </h5>
+        
+
+        <hr>
+        <span class="nav-sidebartoc">
+            <p class="caption"><span class="caption-text">Intro:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Getting Started with the F5 Certification Program 03/29/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 101 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class1/class1.html">F5 101 - App Delivery Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 201 Certification Exam Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../class2.html">F5 201 - TMOS Administration Study Guide 11/01/19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../class3/class3.html">F5 201 - TMOS Administration Labs 08/11/2020</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 202 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class4/class4.html">F5 202 - Pre-Sales Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301A Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class5/class5.html">F5 301A - BIG-IP LTM Specialist: Architect, Set-Up &amp; Deploy Study Guide 11/01/19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../class6/class6.html">F5 301A - BIG-IP LTM Specialist Labs 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301B Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class7/class7.html">F5 301B - BIG-IP LTM Specialist: Maintain and Troubleshoot Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 302 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class9/class9.html">F5 302 - BIG-IP DNS Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 303 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class11/class11.html">F5 303 - BIG-IP ASM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 304 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class13/class13.html">F5 304 - BIG-IP APM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 401 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class15/class15.html">F5 401 - Security Solution Expert Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 402 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class17/class17.html">F5 402 - Cloud Solutions Study Guide 11/01/19</a></li>
+</ul>
+
+        </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
+<hr>
+  <span class="nav-sidebartoc">
+ <!-- insert content here -->
+  </span>
+      </nav>
+    </div>
+
+
+    <div id="right-sidebar">
+      <h7 style="font-weight:normal">On this page:</h7>
+      <nav class="nav-sidebartoc">
+        <span class="nav-sidebartoc">
+            <ul>
+<li><a class="reference internal" href="#">Section 7 - Maintain system configuration</a><ul>
+<li><a class="reference internal" href="#objective-7-01-create-and-restore-a-ucs-archive-under-the-appropriate-circumstances">Objective - 7.01 Create and restore a UCS archive under the appropriate circumstances</a></li>
+<li><a class="reference internal" href="#objective-7-02-identify-which-high-level-tasks-can-be-automated-using-big-iq">Objective - 7.02 Identify which high-level tasks can be automated using BIG-IQ</a></li>
+<li><a class="reference internal" href="#objective-7-03-manage-software-images">Objective - 7.03 Manage software images</a></li>
+<li><a class="reference internal" href="#objective-7-04-given-an-ha-pair-describe-the-appropriate-strategy-for-deploying-a-new-software-image">Objective - 7.04 Given an HA pair, describe the appropriate strategy for deploying a new software image</a></li>
+<li><a class="reference internal" href="#objective-7-05-understand-the-processes-of-licensing-license-reactivation-and-license-modification-add-ons">Objective - 7.05 Understand the processes of licensing, license reactivation, and license modification (add-ons)</a></li>
+<li><a class="reference internal" href="#objective-7-06-identify-which-modules-are-licensed-and-or-provisioned">Objective - 7.06 Identify which modules are licensed and/or provisioned</a></li>
+<li><a class="reference internal" href="#objective-7-07-explain-how-to-create-a-user">Objective - 7.07 Explain how to create a user</a></li>
+<li><a class="reference internal" href="#objective-7-08-explain-how-to-modify-user-properties">Objective - 7.08 Explain how to modify user properties</a></li>
+</ul>
+</li>
+</ul>
+
+         </span>
+      </nav>
+    </div>
+
+
+
+
+
+  
+  <div class="main active" id="content" >
+    <article class="docs-container site-article-inner">
+              <!-- custom breadcrumb -->
+        <h5>
+            <a href="../../index.html">Unofficial - F5 Certification Exam Prep Material</a>
+              &gt; <a href="../class2.html">F5 201 - TMOS Administration Study Guide 11/01/19</a>
+
+          <span class="right">
+             <a href="../../_sources/class2/modules/module7.rst.txt" rel="nofollow">Source</a> |
+             <a href="https://github.com/leifbr/f5-agility-labs-cert">Edit on <i class="fa fa-github" aria-hidden="true"></i></a>
+          </span>
+        </h5>
+        <!-- end custom breadcrumb -->
+      
+
+
+    <!--a title="Export PDF" id="export-pdf" class="btn btn btn-link pull-right">View PDF</a-->
+    <button type="button" id="export-pdf" class="btn btn-link right">PDF</button>
+
+
+    
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
+
+
+     <div role="main">
+        
+  <div class="section" id="section-7-maintain-system-configuration">
+<h1>Section 7 - Maintain system configuration<a class="headerlink" href="#section-7-maintain-system-configuration" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="objective-7-01-create-and-restore-a-ucs-archive-under-the-appropriate-circumstances">
+<h2>Objective - 7.01 Create and restore a UCS archive under the appropriate circumstances<a class="headerlink" href="#objective-7-01-create-and-restore-a-ucs-archive-under-the-appropriate-circumstances" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>7.01 - Discuss scenarios in which restoring a UCS archive is appropriate</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/6.html#conceptid">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/6.html - conceptid</a></p>
+<p>Once you have created the configuration data for the BIG-IP system, you
+can replicate all of this set of data in a separate file. You can then
+use this replicated data later, for these reasons:</p>
+<ul class="simple">
+<li>As an archive for disaster recovery</li>
+</ul>
+<p>Using the Archives feature, you can back up the current configuration
+data, and if necessary, restore the data at a later time. We highly
+recommend that you use this feature to mitigate the potential loss of
+BIG- IP system configuration data. To create an archive, you can use the
+Configuration utility, which stores the configuration data in a special
+file known as a user configuration set, or UCS file. You can then use
+the UCS file to recover from any loss of data, in the unlikely event
+that you need to do so.</p>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>7.01 - Discuss the tasks involved in successfully restoring a UCS archive</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/solutions/public/13000/100/sol13132.html?sr=34127482#restoreui">https://support.f5.com/kb/en-us/solutions/public/13000/100/sol13132.html?sr=34127482#restoreui</a></p>
+<p>There are a few different ways to do a UCS restore on a BIG-IP platform.</p>
+<p><strong>Restoring configuration data by using the Configuration utility</strong></p>
+<p>Impact of procedure: The BIG-IP system replaces any existing
+configuration with the UCS archive file configuration.</p>
+<p>If you are restoring a UCS archive on a BIG-IP 6400, 6800, 8400, or 8800
+hardware platform other than the system from which the backup was
+created, such as when replacing an RMA system, you must perform the
+procedure in the “Restoring configuration data from the command line by
+using the tmsh utility” section of this article to restore the
+configuration.</p>
+<p>To restore a configuration in a UCS archive by using the Configuration
+utility, review the considerations described in the Considerations for
+restoring configuration data section of this article before performing
+the following procedure:</p>
+<ol class="arabic simple">
+<li>Log in to the Configuration utility.</li>
+<li>Click System.</li>
+<li>Click Archives.</li>
+<li>Click the name of the UCS archive you want to restore.</li>
+<li>If the UCS archive is encrypted, type the passphrase for the
+encrypted UCS archive file in the Restore Passphrase field. If the
+UCS archive is not encrypted, you can skip this step.</li>
+<li>To initiate the UCS archive restore process, click Restore.</li>
+<li>When the restore process is completed, examine the status page for
+any reported errors before proceeding to the next step.</li>
+<li>To return to the Archive List page, click OK.</li>
+</ol>
+<p>If you restored the UCS archive on a different device and received the
+errors noted in the “Considerations for restoring configuration data”
+section of this article, you must reactivate the BIG-IP system license.</p>
+<p>After relicensing the system, restart the system to ensure that the
+configuration is fully loaded. To restart the system, navigate to System
+&gt; Configuration, and then click Reboot.</p>
+<p>If the system you restored contains the FIPS 140 HSM, you must configure
+the FIPS 140 HSM Security World after completing steps 1 through 9. For
+additional information about recovering FIPS information after a system
+recovery, refer to the Configuring and Maintaining a FIPS Security
+Domain chapter in the Platform Guide: 6900 and 8900.</p>
+<p><strong>Restoring configuration data from the command line by using the tmsh utility</strong></p>
+<p>Impact of procedure: The BIG-IP system replaces any existing
+configuration with the UCS archive file configuration.</p>
+<ol class="arabic simple">
+<li>Log in to tmsh by typing the following command:</li>
+</ol>
+<p><em>tmsh</em></p>
+<ol class="arabic simple">
+<li>Restore the UCS archive file by using the following command syntax.
+Replace &lt;path/to/UCS&gt; with the full path of the UCS archive file you
+want to restore: <em>load /sys ucs &lt;path/to/UCS&gt;</em></li>
+</ol>
+<p>If you do not specify the path, the BIG-IP system performs as if the UCS
+archive file is located in the default /var/local/ucs directory.</p>
+<ol class="arabic simple">
+<li>If the UCS archive file was encrypted with a passphrase during the
+backup, you are prompted to enter the passphrase for the archive
+file.</li>
+<li>If you are running BIG-IP on a 6400, 6800, 8400, or 8800 hardware
+platform, type the following command to switch to the bash shell:</li>
+</ol>
+<p><em>run /util bash</em></p>
+<ol class="arabic simple">
+<li>Type the following command to verify that the new or replaced secure
+shell (SSH) keys from the UCS file are synchronized between the
+BIG-IP system and the Switch Card Control Processor (SCCP):</li>
+</ol>
+<p><em>keyswap.sh sccp</em></p>
+<ol class="arabic simple">
+<li>Type the following command to switch back to tmsh:</li>
+</ol>
+<p><em>exit</em></p>
+<ol class="arabic simple">
+<li>Restart the system by typing the following command:</li>
+</ol>
+<p><em>reboot</em></p>
+<p>If you installed the UCS archive on the same device on which the backup
+was created, it loads the restored configuration after the system
+restarts. If you restored the backup on a different device and received
+the first error noted in the Considerations for restoring configuration
+data section of this article, you must reactivate the BIG-IP system
+license. Alternatively, you can replace the /config/bigip.license file
+with the original bigip.license file that you backed up from the target
+system.</p>
+<ol class="arabic simple">
+<li>If the system you restored contains the FIPS 140 HSM, you must
+configure the FIPS 140 HSM Security World after completing steps 1
+through 5. For additional information about recovering FIPS
+information after a system recovery, refer to the Configuring and
+Maintaining a FIPS Security Domain chapter in the Platform Guide:
+6900 and 8900.</li>
+</ol>
+<p><strong>Restoring configuration data on a replacement RMA unit</strong></p>
+<p>F5 recommends that you use the following procedure when you restore the
+archive on a different device than the system on which the backup was
+created, such as an RMA system. If you do not use this procedure when
+restoring the archive on a different device, the configuration load may
+fail and the mcpd process generates an error message that appears
+similar to the following example to both stdout and the /var/log/ltm
+file:</p>
+<p>mcpd[2395]: 01070608:0: License is not operational(expired or digital
+signature does not match contents)</p>
+<p>F5 expects this message, and you can correct the issue by re-licensing
+the system, which is discussed later in the procedure.</p>
+<p>Impact of procedure: The BIG-IP system replaces any existing
+configuration with the UCS archive file configuration.</p>
+<ol class="arabic simple">
+<li>Activate the license on the unit according to the steps detailed in
+SOL7752: Overview of licensing the BIG-IP system.</li>
+<li>Log in to tmsh by typing the following command:</li>
+</ol>
+<p><em>tmsh</em></p>
+<ol class="arabic simple">
+<li>Restore the UCS archive file by using the following command syntax.
+Replace &lt;path/to/UCS&gt; with the full path of the UCS archive file you
+want to restore:</li>
+</ol>
+<p><em>load /sys ucs &lt;path/to/UCS&gt; no-license</em></p>
+<p>If you do not specify the path, the BIG-IP system performs as if the UCS
+archive file is located in the default /var/local/ucs directory.</p>
+<ol class="arabic simple">
+<li>If the UCS archive file was encrypted with a passphrase during the
+backup, you are prompted to enter the passphrase for the archive
+file.</li>
+<li>If you are running the BIG-IP system on a 6400, 6800, 8400, or 8800
+hardware platform, switch to the bash utility by entering the
+following command:</li>
+</ol>
+<p>run /util bash</p>
+<ol class="arabic simple">
+<li>To verify that the new or replaced SSH keys from the UCS file are
+synchronized between the BIG-IP and the SCCP, enter the following
+command:</li>
+</ol>
+<p><em>keyswap.sh sccp</em></p>
+<ol class="arabic simple">
+<li>To switch back to tmsh, type the following command:</li>
+</ol>
+<p><em>exit</em></p>
+<ol class="arabic simple">
+<li>Restart the system by typing the following command:</li>
+</ol>
+<p><em>reboot</em></p>
+<ol class="arabic simple">
+<li>If the system you restored contains the FIPS 140 HSM, you must
+configure the FIPS 140 HSM Security World after completing steps 1
+through 5. For additional information about recovering FIPS
+information after a system recovery, refer to the Configuring and
+Maintaining a FIPS Security Domain chapter in the Platform Guide:
+6900 and 8900.</li>
+</ol>
+<p><strong>Restoring UCS archives on BIG-IP systems running later software versions</strong></p>
+<p>Impact of procedure: The BIG-IP system replaces any existing
+configuration with the UCS archive file configuration.</p>
+<p>F5 recommends that the BIG-IP system run the same version of the BIG-IP
+software from which it was backed up. However, in some cases, it is
+possible to restore a UCS archive that was obtained from an earlier
+software version on a target BIG-IP system running a later software
+version. For example, if you saved a UCS archive on a system running
+BIG-IP 10.2.3, it is possible to restore the version BIG-IP 10.2.3
+archive file on a BIG-IP system running 11.x. To restore a UCS archive
+on a BIG-IP system running a later software version, perform the
+following procedure:</p>
+<ol class="arabic simple">
+<li>Verify that a supported upgrade path exists between the software
+version from which the UCS archive was obtained and the software
+version running on the target system.</li>
+</ol>
+<p>For example, there is a supported upgrade path between BIG-IP 10.x and
+BIG-IP 11.x. As a result, you can successfully restore a BIG-IP 10.x UCS
+archive file on a BIG-IP system running 11.x. However, there is no
+supported upgrade path between BIG-IP 9.x and BIG-IP 11.x. As a result,
+you cannot restore a BIG-IP 9.x UCS archive file on a BIG-IP system
+running 11.x.</p>
+<p>For information about supported upgrade paths, refer to the product
+release notes for your specific software version.</p>
+<ol class="arabic simple">
+<li>Review the previous section, Considerations for restoring
+configuration data.</li>
+<li>Manually copy the UCS archive file to the /var/local/ucs/ directory
+on the target system.</li>
+<li>Restore the UCS archive on the BIG-IP system:</li>
+</ol>
+<ul class="simple">
+<li>If you are restoring the archive on a different device than the
+system on which the backup was created, follow the “Restoring
+configuration data on a replacement RMA unit” procedure.</li>
+<li>If you are restoring the archive on a different device than the
+system on which the backup was created, follow the “Restoring
+configuration data from the command line by using the tmsh utility”
+procedure.</li>
+</ul>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>7.01 - Given a scenario, discuss when it is appropriate to create a
+UCS archive</strong></p>
+<p><strong>GUI Study in the vLabs</strong></p>
+<p>Any time the system administrator makes changes to the configuration of
+the system a UCS archive should be taken prior to the change and after
+the change. This will allow for a restore to the point prior to the
+change and also provides a backup of the new current state. This should
+be done on both the Active and stand by systems in an HA pair.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-7-02-identify-which-high-level-tasks-can-be-automated-using-big-iq">
+<h2>Objective - 7.02 Identify which high-level tasks can be automated using BIG-IQ<a class="headerlink" href="#objective-7-02-identify-which-high-level-tasks-can-be-automated-using-big-iq" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>7.02 - Identify which high-level tasks can be automated using BIG-IQ</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-iq-adc/manuals/product/bigiq-adc-administration-4-5-0/1.html#unique_1381791279">https://support.f5.com/kb/en-us/products/big-iq-adc/manuals/product/bigiq-adc-administration-4-5-0/1.html - unique_1381791279</a></p>
+<p>BIG-IQ Application Delivery Controller (ADC) makes it possible for you
+to monitor and manage the Local Traffic Manager (LTM) configuration on
+BIG-IP devices. This module helps the user:</p>
+<ul class="simple">
+<li>Create efficient work flows to view the LTM configurations in a
+relational and dynamic user interface.</li>
+<li>Control access to configuration objects using fine-grained,
+role-based access control (RBAC). This allows administrators to
+delegate frequently performed operations (for example, enabling or
+disabling pool members) to the correct team member.</li>
+<li>Maintain ultimate control of the LTM configuration by providing a
+staging option. Delegated team members make all relevant changes,
+then the administrator can apply them after a quick review.</li>
+</ul>
+<p>BIG-IQ ADC has two primary interfaces; Configuration and Deployment.</p>
+<ul class="simple">
+<li>Use the Configuration interface to work with the settings for the
+devices the BIG-IQ device manages. The Configuration interface has
+two interactive modes: On BIG-IQ and On BIG-IP.</li>
+<li>When BIG-IP is selected, the settings that display for the managed
+devices are from the most recent sync. You cannot make changes to
+these settings when BIG-IP is selected.</li>
+<li>When On BIG-IQ is selected, the settings that display for the managed
+devices still include the most recent sync settings, but also include
+any revisions you have made.</li>
+<li>Use the Deployment interface to apply configuration changes, that
+were made on the BIG-IQ device, to the managed devices.</li>
+</ul>
+<p>To get familiar with BIG-IQ for the exam you should download the VE of
+BIG-IQ and set it up in your vLAB environment.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-7-03-manage-software-images">
+<h2>Objective - 7.03 Manage software images<a class="headerlink" href="#objective-7-03-manage-software-images" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/solutions/public/k/34/sol34745165.html?sr=54637095">https://support.f5.com/kb/en-us/solutions/public/k/34/sol34745165.html?sr=54637095</a></p>
+<p>The BIG-IP system allows you to install and delete additional software
+images on separate boot locations, also called volumes. You can then
+boot the BIG-IP system to a specific volume and begin processing traffic
+using that specific software version. By default, the BIG-IP system has
+three volumes that appear similar to the following example:</p>
+<hr class="docutils" />
+<p>Sys::Software Status</p>
+<p>Volume Product Version Build Active Status</p>
+<hr class="docutils" />
+<p>HD1.1 BIG-IP 11.5.2 0.0.141 no complete</p>
+<p>HD1.2 BIG-IP 11.5.3 0.0.163 yes complete</p>
+<p>HD1.3 none none none no complete</p>
+<p>You can find the step-by-step instructions on loading software onto the
+BIG-IP in this sections hyperlink.</p>
+<p><strong>Potential impact of booting a device into another volume</strong></p>
+<p>Booting the BIG-IP platform into another volume may put the system in an
+inaccessible state if the circumstances are right. Just because there is
+an OS loaded onto a volume does not mean there is any configuration
+other than the default configuration on the volume. The out of band
+management may still be set to the default IP address and you could lose
+your management connection the unit. Or if this was a volume that was
+used in the past it will likely be in the state it was in when the
+system was booted into another volume. This could mean that it is
+running some older configuration that is not the same as the current
+configuration in the current volume, or the system could even be
+licensed differently leaving some functions of the OS not even enabled.</p>
+<p>The <strong>cpcfg</strong> command allows you to copy a configuration from a
+specified source boot location to a specified target boot location. If
+the specified target boot location is an earlier version than the source
+boot location, the command fails with an error message. If the specified
+target boot location is the active boot location, the command fails with
+an error message.</p>
+<p><strong>Common issues related to the migration of a device to a new software version</strong></p>
+<p><a class="reference external" href="http://support.f5.com/kb/en-us/solutions/public/13000/100/sol13123.html">http://support.f5.com/kb/en-us/solutions/public/13000/100/sol13123.html</a></p>
+<p>If the device you are migrating, to a new version of software, is not an
+HA pair. The upgrade will cause an outage so plan accordingly.</p>
+<p>When dealing with an HA pair of devices, upgrades should be done on the
+units in the standby state to minimize outages. A hotfix to an existing
+software version is normally non-impactful to the operation of the unit,
+however it is still a best practice to upgrade the standby unit first,
+confirm the upgrade, failover the pair and proceed with upgrading the
+now standby unit.</p>
+<p>Always follow the F5 Solutions or SOLs for installing the software.</p>
+<p>Some common issues that can be impactful to an environment when doing
+software upgrades are know issues with the release, iRule compatibility
+with the newer version and older version configurations migrating
+forward successfully.</p>
+<p>Before upgrading to the next desired version of OS the administrator
+should read all the release notes to make sure that the known issues on
+that release will not impact with the configurations currently running.</p>
+<p>iRules are compiled scripts running on the system’s current version of
+code. Changes in the OS can change how the iRule functions (or functions
+at all) between versions. Testing the OS upgrade in a lab environment is
+the best way to make sure there are no failing iRules after an upgrade.
+Also reading through the DevCentral reference on Commands and Events by
+version is a good plae to start.
+<a class="reference external" href="https://devcentral.f5.com/wiki/iRules.BIGIP_Commands_by_Version.ashx">https://devcentral.f5.com/wiki/iRules.BIGIP_Commands_by_Version.ashx</a></p>
+<p>When migrating from older releases to a newer major release of OS, there
+can be issues with configuration migration to the newer release. You
+should always read the release notes and follow the recommended
+migration path for the version on the Ask F5 site.
+<a class="reference external" href="http://support.f5.com/kb/en-us.html">http://support.f5.com/kb/en-us.html</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-7-04-given-an-ha-pair-describe-the-appropriate-strategy-for-deploying-a-new-software-image">
+<h2>Objective - 7.04 Given an HA pair, describe the appropriate strategy for deploying a new software image<a class="headerlink" href="#objective-7-04-given-an-ha-pair-describe-the-appropriate-strategy-for-deploying-a-new-software-image" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>7.04 - Given an HA pair, describe the appropriate strategy for deploying a new software image</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/bigip-upgrade-active-standby-11-4-0/1.html#unique_305366860">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/bigip-upgrade-active-standby-11-4-0/1.html - unique_305366860</a></p>
+<p>The upgrade process involves preparation of the two BIG-IP devices
+(Device A and Device B) configured in an active-standby implementation,
+followed by the installation and verification of version 11.0 on each
+device. When you upgrade each device, you perform several tasks.
+Completing these tasks results in a successful upgrade to version 11.0
+on both BIG-IP devices, with a traffic group configured properly for an
+active-standby implementation.</p>
+<p>In a properly configured HA pair of BIG-IP devices, a software upgrade
+should always be done on the standby unit in the pair. This allows the
+upgrade to be hitless to the extent of nothing greater than a failover
+between functioning units in the HA pair.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-7-05-understand-the-processes-of-licensing-license-reactivation-and-license-modification-add-ons">
+<h2>Objective - 7.05 Understand the processes of licensing, license reactivation, and license modification (add-ons)<a class="headerlink" href="#objective-7-05-understand-the-processes-of-licensing-license-reactivation-and-license-modification-add-ons" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>7.05 - Understand the processes of licensing, license reactivation,
+and license modification (add-ons)</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/solutions/public/7000/700/sol7752.html?sr=54637267">https://support.f5.com/kb/en-us/solutions/public/7000/700/sol7752.html?sr=54637267</a></p>
+<p>Before you can configure and use the BIG-IP system, you must activate a
+valid license on the system. To license the BIG-IP system, you must
+perform the following procedures:</p>
+<p>Obtaining a registration key</p>
+<p>Obtaining a dossier</p>
+<p>Activating the license</p>
+<p><strong>Obtaining a registration key</strong></p>
+<p>Before you can activate the license for the BIG-IP system, you must
+obtain a base registration key. The base registration key is a
+27-character string that instructs the license server which F5 products
+you can license. The base registration key is pre-installed on new
+BIG-IP systems. When you connect to the Configuration utility, the
+Licensing screen opens and displays the registration key.</p>
+<p><strong>Obtaining a dossier</strong></p>
+<p>The dossier is an encrypted list of key characteristics used to identify
+the platform, which you can obtain from the BIG-IP software. The dossier
+is generated by your F5 product after you choose a license activation
+method.</p>
+<p><strong>Activating the license</strong></p>
+<p>If your BIG-IP system is not yet licensed and you connect to the
+Configuration utility, you are prompted to enter the base registration
+key. Certain systems may require you to enter keys for additional
+modules in the Add-On Registration Key List box.</p>
+<p>To activate the license on the BIG-IP system using the Configuration
+utility, you can use either the automatic activation method or the
+manual activation method. The activation method specifies the method by
+which you want the system to communicate with the F5 License Server. The
+license activation date is unique to the device that the dossier is
+derived from.</p>
+<p>For step-by-step procedures please review the content via the hyperlink.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-7-06-identify-which-modules-are-licensed-and-or-provisioned">
+<h2>Objective - 7.06 Identify which modules are licensed and/or provisioned<a class="headerlink" href="#objective-7-06-identify-which-modules-are-licensed-and-or-provisioned" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>7.06 - Identify which modules are licensed and/or provisioned</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/solutions/public/12000/100/sol12111.html?sr=54657583">https://support.f5.com/kb/en-us/solutions/public/12000/100/sol12111.html?sr=54657583</a></p>
+<p>Using the Configuration utility, you can easily display the licensed
+software and see which of the software modules are provisioned to run on
+the platform. Simply go to System &gt; Resource Provisioning to see the
+current configuration.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../_images/p17.png" src="../../_images/p17.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-7-07-explain-how-to-create-a-user">
+<h2>Objective - 7.07 Explain how to create a user<a class="headerlink" href="#objective-7-07-explain-how-to-create-a-user" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>7.07 - Explain how to create a user</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/10.html?sr=54654799">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/10.html?sr=54654799</a></p>
+<p>An important part of managing the BIG-IP system is creating and managing
+user accounts for BIG-IP system administrators. By creating user
+accounts for system administrators, you provide additional layers of
+security. User accounts ensure that the system:</p>
+<ul class="simple">
+<li>Verifies the identity of users logging into the system
+(authentication)</li>
+<li>Controls user access to system resources (authorization)</li>
+</ul>
+<p>To enable user authentication and authorization, you assign passwords
+and user roles to your user accounts. Passwords allow you to
+authenticate your users when they attempt to log in to the BIG-IP
+system. User roles allow you to control user access to BIG-IP system
+resources.</p>
+<p>You can create and store BIG-IP administrative accounts either locally
+on the BIG-IP system, or remotely on a separate authentication server.
+If you want your user accounts to reside locally on the BIG-IP system,
+you create those user accounts on the BIG-IP system and assign user
+roles to them.</p>
+<p>If you want your user accounts to reside remotely on a separate
+authentication server, you do not use the BIG-IP system to create the
+accounts. Instead, you use the mechanism provided by the server vendor,
+and you use the BIG-IP system strictly to assign user roles to those
+remote accounts and to maintain those user role assignments over time.
+The types of servers that you can use to remotely store BIG-IP system
+user accounts are:</p>
+<ul class="simple">
+<li>Lightweight Directory Access Protocol (LDAP) servers</li>
+<li>Active Directory servers</li>
+<li>Remote Authentication Dial-in User Service (RADIUS) servers</li>
+</ul>
+<p>User account types</p>
+<p>There are two types of user accounts on the BIG-IP system: The system
+maintenance account and a set of standard user accounts.</p>
+<p>The system maintenance account</p>
+<p>The system maintenance account is a user account that you maintain using
+the Setup utility. The name of the system maintenance account is root.
+This account resides locally on the BIG-IP system and grants full access
+to BIG-IP system resources. You configure and maintain this account
+using the Setup utility and the Configuration utility, respectively.</p>
+<p>Standard user accounts</p>
+<p>Standard user accounts are user accounts that you create for other
+BIG-IP system administrators to use. Standard user accounts can reside
+either locally on the BIG-IP system, or remotely on a remote
+authentication server. You create and maintain these accounts using the
+browser-based Configuration utility or the command line interface.
+Creating standard user accounts allows you to assign various user roles
+to those accounts as a way to control system administrator access to
+BIG-IP system resources. A special standard user account is the admin
+account, which automatically exists on any BIG-IP system.</p>
+<p>You are not required to have any user accounts other than the root and
+admin accounts, but F5 recommends that you create other user
+accounts, as a way to intelligently control administrator access to
+system resources.</p>
+<p>Administrative partitions</p>
+<p>When you create configurable objects for the BIG-IP system, you have the
+option of putting those objects into administrative partitions. An
+administrative partition is a logical container of BIG-IP system objects
+such as virtual servers, pools, and monitors. When you first install the
+BIG-IP system, a default partition already exists named Common.</p>
+<p>By putting objects into partitions, you establish a finer granularity of
+access control. Rather than having control over all resources on the
+BIG-IP system or no resources whatsoever, users with certain permissions
+can control resources within a designated partition only. For example,
+users with the role of Operator can mark nodes up or down, but can only
+mark those nodes that reside within their designated partition.</p>
+<p>User accounts are another type of object that you can put into a
+partition. You put user accounts into administrative partitions strictly
+for the purpose of giving other users administrative access to those
+accounts. For example, you can put user accounts into partition B, and
+then assign a set of permissions (known as a user role) to user Jane so
+that she is allowed to modify user accounts in partition B.</p>
+<p>Each user account on the BIG-IP system has a property known as Partition
+Access. The Partition Access property defines the partitions that the
+user can access. A user account can have access to either one partition
+or all partitions. Access to all partitions is known as universal
+access.</p>
+<p>This figure shows how partition access can differ for different user
+accounts on the BIG-IP system.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../_images/p18.png" src="../../_images/p18.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>In this example, the BIG-IP system objects reside in multiple
+partitions. Note that user accounts are also a type of BIG-IP system
+object, and as such, reside in a partition named Users. (Although you
+are not required to group user accounts together in a separate
+partition, for security purposes F5 highly recommends that you
+do so.)</p>
+<p>To continue with the example, each user account in partition Users has
+access to specific, but different, partitions. Note that user accounts
+sjones, cjohnson, and gnelson can access one partition only, while the
+tbrown account has universal access.</p>
+<p>To summarize, an administrative partition defines a set of objects,
+including user accounts, that other administrative users can potentially
+manage. This gives computing organizations greater control over user
+access to specific objects on the BIG-IP system.</p>
+<p><strong>What are user roles?</strong></p>
+<p>User roles are a means of controlling user access to BIG-IP system
+resources. You assign a user role to each administrative user, and in so
+doing, you grant the user a set of permissions for accessing BIG-IP
+system resources.</p>
+<p>The BIG-IP system offers several different user roles that you can
+choose from when assigning a role to an administrative user. A user role
+is a property of a user account. Each user role grants a different set
+of permissions. More specifically, a user role defines:</p>
+<p>The resources that a user can manage</p>
+<p>User roles define the types of resources, or objects, that a user can
+manage. For example, a user with the role of Operator can enable or
+disable nodes and pool members only. By contrast, a user with the Guest
+role cannot manage any BIG-IP system resources.</p>
+<p>The tasks that a user can perform</p>
+<p>For example, a user with the role of Operator can enable or disable
+nodes and pool members, but cannot create, modify, or delete them.
+Conversely, a user with the Manager role can perform all tasks related
+to partitioned objects (except for user accounts), including nodes and
+pool members.</p>
+<p>Important: A role defines the type of objects that a user can manage and
+the tasks that a user can perform on those object types. A role does not
+define the set of specific, existing objects that the user can access.</p>
+<p><strong>User roles on the BIG-IP system</strong></p>
+<p><strong>Administrator:</strong> This role grants users complete access to all
+partitioned and non-partitioned objects on the system. In addition,
+accounts with the Administrator role can change their own passwords.</p>
+<p><strong>Resource Administrator</strong>: This role grants users complete access to
+all partitioned and non-partitioned objects on the system, except user
+account objects. In addition, accounts with the Resource Administrator
+role can change their own passwords.</p>
+<p><strong>User Manager</strong>: Users with the User Manager role that have access to
+all partitions can create, modify, delete, and view all user accounts
+except those that are assigned the Administrator role, or the User
+Manager role with different partition access. Accounts with the User
+Manager role that have access to all partitions can also change their
+own passwords.</p>
+<p>Users with the User Manager role that have access only to a single
+partition can create, modify, delete, and view only those user accounts
+that are in that partition and that have access to that partition only.
+For example, if your user account has a User Manager role and has access
+to Partition A only, then you can manage only those user accounts that
+both reside in and have access to Partition A only.</p>
+<p>User accounts with the User Manager role can change their own passwords.</p>
+<p><strong>Manager</strong>: This role grants users permission to create, modify, and
+delete virtual servers, pools, pool members, nodes, custom profiles,
+custom monitors, and iRules. These users can view all objects on the
+system and change their own passwords.</p>
+<p><strong>Certificate Manager:</strong> This role grants users permission to manage
+device certificates and keys, as well as perform Federal Information
+Processing Standard (FIPS) operations.</p>
+<p>iRule Manager: This role grants users permission to create, modify, and
+delete iRules. Users with this role cannot affect the way that an iRule
+is deployed. For example, a user with this role can create an iRule but
+cannot assign it to a virtual server or move the iRule from one virtual
+server to another. A user with this role can be assigned universal
+access to administrative partitions.</p>
+<p><strong>Application Editor</strong>: This role grants users permission to modify
+nodes, pools, pool members, and monitors. These users can view all
+objects on the system and change their own passwords.</p>
+<p><strong>Acceleration Policy Editor</strong>: This role allows users to view, create,
+modify, and delete all WebAccelerator policy objects in all
+administrative partitions. Users can also view, create, update, and
+delete Web Acceleration profiles.</p>
+<p><strong>Application Security Administrator</strong>: This role grants a user access
+to all Application Security Manager security policy objects on the
+BIG-IP system. These users have read-only permission for these profile
+types: HTTP, FTP, and SMTP. These users have no access to other LTM
+objects, nor to any TMOS objects. They can, however, change their own
+passwords. With respect to security policy objects, this role is similar
+to the Administrator role. You can assign this role only when the BIG-IP
+system includes the BIG-IP Application Security Manager component.</p>
+<p><strong>Web Application Security Editor:</strong> This role allows a user to
+configure or view most parts of the Application Security Manager
+component, in a specified administrative partition only. Specifically,
+these users have limited access to LTM objects, namely read-only
+permission for these profile types: HTTP, FTP, and SMTP.</p>
+<p>These users have no access to other LTM objects, nor to any TMOS
+objects. They can, however, change their own passwords.</p>
+<p>You can assign this role only when the BIG-IP system includes the
+Application Security Manager component.</p>
+<p><strong>Operator</strong>: This role grants users permission to enable or disable
+nodes and pool members. These users can view all objects and change
+their own passwords.</p>
+<p><strong>Auditor</strong>: This role grants users permission to view all configuration
+data on the system, including logs and archives. Users with this role
+cannot create, modify, or delete any data, nor can they view SSL keys or
+user passwords.</p>
+<p><strong>Guest</strong>: This role grants users permission to view all objects on the
+system except for sensitive data such as logs and archives. Users with
+this role can change their own passwords.</p>
+<p><strong>No Access</strong>: This role prevents users from accessing the system.</p>
+<p><strong>Local user account creation</strong></p>
+<p>You can create a new user in the GUI as well as tmsh. To create a user
+in the GUI, go to System &gt; Users and then click Create.</p>
+<p>When you create a local user account, you must give the account a name
+and a password. You must also set the user role, either by retaining the
+default user role or by assigning a new one. The default user role for
+local, non-system maintenance accounts is No Access.</p>
+<p>Only users who have been granted the Administrator or User Manager role
+can create user accounts. If the user role assigned to your account is
+Administrator, you can create a user account in any partition on the
+system. If the user role assigned to your account is User Manager, you
+can create a user account in any partition to which you have access.</p>
+<p><strong>Properties of a local BIG-IP system user account</strong></p>
+<p><strong>User Name:</strong> Specifies the name of the user account. The BIG-IP system
+is case-sensitive, which means that names such as JONES and Jones are
+treated as separate user accounts. No default value</p>
+<p><strong>Partition:</strong> When viewing the properties of an existing user account,
+displays the name of the partition in which the user account resides.
+All partitionable BIG-IP system objects (including user account objects)
+have the Partition property. Note that you cannot edit the value of this
+setting. No default value</p>
+<p><strong>Password</strong>: Specifies a password that the user will use to log in to
+the BIG-IP system. No default value</p>
+<p><strong>Role</strong>: Specifies the user role that you want to assign to the user
+account. Default Value No Access</p>
+<p><strong>Partition Access</strong>: Specifies the partition to which the user has
+access when logged on to the BIG-IP system. If you have permission to do
+so, you can assign this value to a new user account, or change this
+value on an existing user account. This setting appears only when the
+user role for the account is not Administrator. (Accounts with the
+Administrator role always have universal partition access, that is,
+access to all partitions.) Default Value All</p>
+<p><strong>Terminal Access</strong>: Specifies the level of access to the BIG-IP system
+command line interface. Possible values are: Disabled and Advanced
+shell. Users with the Administrator or Resource Administrator role
+assigned to their accounts can have advanced shell access, that is,
+permission to use all BIG-IP system command line utilities, as well as
+any Linux commands. Default Value Disabled</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-7-08-explain-how-to-modify-user-properties">
+<h2>Objective - 7.08 Explain how to modify user properties<a class="headerlink" href="#objective-7-08-explain-how-to-modify-user-properties" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>7.08 - Explain how to modify user properties</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/10.html?sr=54654799">https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-concepts-11-4-0/10.html?sr=54654799</a></p>
+<p>Using the Configuration utility, you can easily display a list of
+existing local user accounts and view the properties of an individual
+account. Only users who have been granted the Administrator or User
+Manager roles can view the settings of other user accounts.</p>
+<p>If the user role assigned to your account is Administrator, you can view
+any user account on the BIG-IP system, in any partition. If the user
+role assigned to your account is User Manager, you can view any user
+account in any partition to which you have access on the BIG-IP system.</p>
+<p>To summarize, depending on their own partition access, users with a User
+Manager role can do some or all of the following:</p>
+<ul class="simple">
+<li>Change another user’s password</li>
+<li>Change another user’s user role</li>
+<li>Change the partition in which the user can access objects (applies
+only to users who have both a User Manager role and access to all
+partitions)</li>
+<li>Enable or disable terminal access</li>
+</ul>
+<p><strong>Local user account modification</strong></p>
+<p>You use the Configuration utility to modify the properties of any
+existing local user account, other than the root account. When modifying
+user accounts, consider the following:</p>
+<ul class="simple">
+<li>Only users who have been granted either the Administrator or User
+Manager role can modify user accounts other than their own account.</li>
+<li>A user with the User Manager role can modify only those accounts that
+reside in the partition to which that user has access. For example,
+if user nelson has a User Manager role and has access to partition B
+only, he can modify only those user accounts that reside in partition
+B. Even in this case, however, for user accounts in partition B, user
+nelson cannot modify a user’s Partition Access property. If, however,
+user nelson has a User Manager role and has access to all partitions,
+he can modify all user accounts on the system. This includes changing
+another user’s Partition Access property.</li>
+<li>Users with any role but No Access can modify their own user accounts
+to change the password. These users cannot modify any other
+properties of their own user accounts. <em>Note: When a user changes his
+own password, the system automatically logs the user off of the
+Configuration utility. The system then requires the user to use the new
+password for subsequent logins. This behavior applies even when the new
+password matches the old password.</em></li>
+<li>Users with the role of User Manager can modify all of the properties
+of their own user accounts, except their user role and partition
+access.</li>
+</ul>
+<p>If you have an Administrator user role, you can also change some
+properties of the root account. Specifically, you can change the
+password of the root account, and you can enable or disable access to
+the BIG-IP system through SSH.</p>
+<p><em>Warning: The Administrator user role provides access to the BIG-IP
+system prompt. If a user with the Administrator user role is currently
+logged on to the system, and you change the user role to a role other
+than Administrator or Resource Administrator, the user can still run
+commands at the BIG-IP system prompt until he or she logs off of the
+system.</em></p>
+<p><strong>Delete local user accounts</strong></p>
+<p>If the account you are using has the Administrator or User Manager user
+role, you can delete other local user accounts. A user with the
+Administrator role can delete any user account on the BIG-IP system in
+any partition. A user with the User Manager role can delete user
+accounts on the BIG-IP system in only those partitions to which she has
+access.</p>
+<p>When you delete a local user account, you remove it permanently from the
+local user-account database on the BIG-IP system.</p>
+<p><em>Note: You cannot delete the admin user account, nor can you delete the
+user account with which you are logged in.</em></p>
+<p><em>Warning: The Administrator user role provides access to the BIG-IP
+system prompt. If a user with the Administrator user role is currently
+logged in to the system and you delete the user account, the user can
+still run commands at the BIG-IP system prompt until he or she logs off
+of the system.</em></p>
+<p><strong>Remote user account management</strong></p>
+<p>Rather than store user accounts locally on the BIG-IP system, you can
+store them on a remote authentication server. In this case, you create
+all of your standard user accounts (including user names and passwords)
+on that remote server, using the mechanism supplied by that server’s
+vendor.</p>
+<p>Once you have created each user account on the remote server, you can
+then use the BIG-IP system to assign authorization properties (user
+role, partition access, and terminal access) for each account, for the
+purpose of controlling user access to BIG-IP system resources.</p>
+<p><em>Important: You can assign authorization properties to remotely-stored
+user accounts on a group basis. You can then use the single
+configuration file (SCF) feature to propagate those properties to other
+BIG-IP devices on the network.</em></p>
+<p>The Configuration utility stores all local and remote access control
+information in the BIG-IP system’s local user-account database. When a
+user whose account information is stored remotely logs into the BIG-IP
+system and is granted authentication, the BIG-IP system then checks its
+local database to determine the access control properties that you
+assigned to that user.</p>
+<p><em>Note: The Configuration utility refers to remote user accounts as
+external users. An external user is any user account that is stored on a
+remote authentication server.</em></p>
+<p><em>Important: Only users with the role of Administrator can manage user
+roles for remote user accounts. Also, if a user with a local user
+account is logged on to the BIG-IP system, and you subsequently switch
+the system from local authentication to remote authentication, the local
+user remains authenticated until the user’s login session terminates.</em></p>
+<p><strong>Remote user-account server specification</strong></p>
+<p>One of the tasks you perform with the Configuration utility is to
+specify the type of remote user-account server that currently stores
+your remote user accounts. The available server types that you can
+specify are:</p>
+<ul class="simple">
+<li>Active Directory or Lightweight Directory Access Protocol (LDAP)</li>
+<li>Remote Authentication Dial-In User Service (RADIUS)</li>
+<li>Terminal Access Controller Access-Control System Plus (TACACS+)</li>
+</ul>
+<p>When you specify the type of remote server, you can also configure some
+server settings. For example, you can specify the user role you would
+like the BIG-IP system to assign to a remote account if you do not
+explicitly assign one.</p>
+<p>Once you have configured the remote server, if you want any of the
+remote accounts to have a non-default user role, you can explicitly
+assign a user role to those accounts.</p>
+<p>If the remote authentication server is an Active Directory or LDAP
+server and is set up to authenticate SSL traffic, there is an additional
+feature that you can enable. You can configure the BIG-IP system to
+perform the server-side SSL handshake that the remote server would
+normally perform when authenticating client traffic. In this case, there
+are some preliminary steps you must perform to prepare for remote
+authentication using SSL.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+     </div>
+    
+     <div class="row next-prev-btn-row">
+       <div class="col-lg-12">
+       
+        <a href="module6.html" title="Section 6 - Identify and report current device status" accesskey="p" class="btn btn-primary left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+       
+       
+          <a href="module8.html" title="Section 8 - Manage existing system and application services" accesskey="n" class="btn btn-primary right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+       
+     </div>
+     </div>
+    
+
+    </article>
+  </div>
+
+</div>
+
+
+  <div id="clouddocs-footer"></div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="../../_static/js/index.js"></script>
+  <script src="../../_static/js/jquery.appear.js"></script>
+  <script src="../../_static/js/printThis.js"></script>
+  <script src="../../_static/js/bootstrap.min.js"></script>
+  <script src="../../_static/js/clouddocs.js"></script>
+  <script src="../../_static/js/CoveoJsSearch.Lazy.min.js"></script>
+  </body>
+</html>
