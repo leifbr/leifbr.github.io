@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<head>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PPZPQ6');</script>
+  <!-- End Google Tag Manager -->
+    <title>Section 3 - Troubleshoot basic performance issues</title>
+  
+
+  <meta charset="utf-8">
+  <!-- Twitter Bootstrap viewport setting -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- F5 metadata -->
+  <meta name="title" content="Section 3 - Troubleshoot basic performance issues"/>
+  <meta name="product" content="Unofficial - F5 Certification Exam Prep Material"/>
+  <meta name="version" content=""/>
+  <meta name="updated_date"  content="2020-08-13 09:31:44"/>
+  <meta name="archived" content="Archived documents excluded"/>
+  <meta name="doc_type" content="Manual"/>
+  <meta name="lifecycle" content="release"/>
+  <meta name="Unofficial - F5 Certification Exam Prep Material" content=""/>
+
+
+  
+
+  
+  <link href="https://cdn.f5.com/favicon.ico" rel="icon">
+
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Section 3 - Troubleshoot basic performance issues &#8212; Unofficial - F5 Certification Exam Prep Material  documentation</title>
+    <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5_agility_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/CoveoFullSearch.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/21fb8a09c3.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Section 4 - Troubleshoot basic device management connectivity issues" href="module4.html" />
+    <link rel="prev" title="Section 2 - Troubleshoot basic hardware issues" href="module2.html" /> 
+  </head><body>
+  <div id="clouddocs-header"></div>
+
+    <div id="sidebar" class="section-nav">
+      
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
+      <nav class="nav-sidebartoc">
+
+        
+         <h5>Unofficial - F5 Certification Exam Prep Material  </h5>
+        
+
+        <hr>
+        <span class="nav-sidebartoc">
+            <p class="caption"><span class="caption-text">Intro:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Getting Started with the F5 Certification Program 03/29/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 101 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class1/class1.html">F5 101 - App Delivery Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 201 Certification Exam Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../class2.html">F5 201 - TMOS Administration Study Guide 11/01/19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../class3/class3.html">F5 201 - TMOS Administration Labs 08/11/2020</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 202 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class4/class4.html">F5 202 - Pre-Sales Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301A Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class5/class5.html">F5 301A - BIG-IP LTM Specialist: Architect, Set-Up &amp; Deploy Study Guide 11/01/19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../class6/class6.html">F5 301A - BIG-IP LTM Specialist Labs 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301B Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class7/class7.html">F5 301B - BIG-IP LTM Specialist: Maintain and Troubleshoot Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 302 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class9/class9.html">F5 302 - BIG-IP DNS Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 303 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class11/class11.html">F5 303 - BIG-IP ASM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 304 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class13/class13.html">F5 304 - BIG-IP APM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 401 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class15/class15.html">F5 401 - Security Solution Expert Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 402 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class17/class17.html">F5 402 - Cloud Solutions Study Guide 11/01/19</a></li>
+</ul>
+
+        </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
+<hr>
+  <span class="nav-sidebartoc">
+ <!-- insert content here -->
+  </span>
+      </nav>
+    </div>
+
+
+    <div id="right-sidebar">
+      <h7 style="font-weight:normal">On this page:</h7>
+      <nav class="nav-sidebartoc">
+        <span class="nav-sidebartoc">
+            <ul>
+<li><a class="reference internal" href="#">Section 3 - Troubleshoot basic performance issues</a><ul>
+<li><a class="reference internal" href="#objective-3-01-recognize-when-a-packet-capture-is-needed-within-the-context-of-a-performance-issue">Objective - 3.01 Recognize when a packet capture is needed within the context of a performance issue</a></li>
+<li><a class="reference internal" href="#objective-3-02-use-big-ip-tools-in-order-to-identify-potential-performance-issues">Objective - 3.02 Use BIG-IP tools in order to identify potential performance issues</a></li>
+</ul>
+</li>
+</ul>
+
+         </span>
+      </nav>
+    </div>
+
+
+
+
+
+  
+  <div class="main active" id="content" >
+    <article class="docs-container site-article-inner">
+              <!-- custom breadcrumb -->
+        <h5>
+            <a href="../../index.html">Unofficial - F5 Certification Exam Prep Material</a>
+              &gt; <a href="../class2.html">F5 201 - TMOS Administration Study Guide 11/01/19</a>
+
+          <span class="right">
+             <a href="../../_sources/class2/modules/module3.rst.txt" rel="nofollow">Source</a> |
+             <a href="https://github.com/leifbr/f5-agility-labs-cert">Edit on <i class="fa fa-github" aria-hidden="true"></i></a>
+          </span>
+        </h5>
+        <!-- end custom breadcrumb -->
+      
+
+
+    <!--a title="Export PDF" id="export-pdf" class="btn btn btn-link pull-right">View PDF</a-->
+    <button type="button" id="export-pdf" class="btn btn-link right">PDF</button>
+
+
+    
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
+
+
+     <div role="main">
+        
+  <div class="section" id="section-3-troubleshoot-basic-performance-issues">
+<h1>Section 3 - Troubleshoot basic performance issues<a class="headerlink" href="#section-3-troubleshoot-basic-performance-issues" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="objective-3-01-recognize-when-a-packet-capture-is-needed-within-the-context-of-a-performance-issue">
+<h2>Objective - 3.01 Recognize when a packet capture is needed within the context of a performance issue<a class="headerlink" href="#objective-3-01-recognize-when-a-packet-capture-is-needed-within-the-context-of-a-performance-issue" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>A packet capture can be one of the most powerful tools that an
+administrator has at there command. If you are not use to doing packet
+captures or have never done one, you should do them in your vLabs as
+soon as possible to start becoming proficient.</p>
+<p><strong>Running tcpdump on a busy system</strong></p>
+<p><strong>Important:</strong> The BIG-IP system is designed as an application delivery
+network platform and not as a packet capture device. If you intend to
+capture traffic under high load conditions, F5 recommends mirroring
+traffic to a dedicated sniffing device.</p>
+<p>Running tcpdump on a BIG-IP system is considered best effort, as it will
+place more load on the CPU and may result in inaccuracies in the tcpdump
+output, such as missed packets or packet timestamp irregularities. If
+you run tcpdump on a heavily loaded BIG-IP system, the packet capture
+process may not capture all matching traffic, and the statistical values
+reported by tcpdump may be inaccurate.</p>
+<p>If you run tcpdump on a heavily loaded system, F5 recommends using
+tcpdump filter expressions to mitigate the potential for missed packets.</p>
+<p><strong>Determine an appropriate location to take the capture</strong></p>
+<p><a class="reference external" href="http://support.f5.com/kb/en-us/solutions/public/6000/500/sol6546.html">http://support.f5.com/kb/en-us/solutions/public/6000/500/sol6546.html</a></p>
+<p>An administrator can also do a capture from their workstation. The will
+gather traffic between the destination and their workstation, which in
+most cases is between the virtual server on the LTM and their
+workstation. Captures can also be done locally on the F5 BIG-IP
+platform. Doing a capture on the BIG-IP LTM is very strategic since you
+have the ability to capture both sides of the proxied conversation
+between the workstation and the back end server resources. Understanding
+which networks the resources are on for both sides of the conversation
+will also allow you to narrow the capture using filters in the tcpdump.</p>
+<p>F5 recommends that you run tcpdump on a VLAN when you intend to capture
+traffic for in-depth troubleshooting on the BIG-IP system. When the VLAN
+is specified in the tcpdump syntax, tcpdump can read packets processed
+by TMM.</p>
+<p><strong>Determine the appropriate time to take capture</strong></p>
+<p><strong>Command Line Study in the vLabs</strong></p>
+<p>The right time to do a capture can be a catch 22. You need to capture
+the issue; so a capture needs to be done while the problem is occurring.
+Of course sometimes the problem may only be occurring under peak load.
+So doing a capture during peak load may be ineffective due to issues
+mentioned in the opening of this section. However most of the time you
+can do the capture when the problem is occurring and tightening up the
+amount of data you capture by using filters will help with overhead.</p>
+<p><strong>Given a scenario, determine whether a packet capture is appropriate</strong></p>
+<p><strong>Command Line Study in the vLabs</strong></p>
+<p>This blueprint topic is related to choosing the correct answer for a
+scenario type of question. For most questions like these you must have
+exposure to supporting the BIG-IP platform in a production environment
+or understand many of the different issues that may arise around the
+topic and the best practice method of solving the issue. Hands-on study
+is the best way to master these types of topics.</p>
+<p>There may be times that determining the source of an issue will not
+require the administrator to do a capture. When a problem arises look
+first to the status of the BIG-IP and the configuration. If all of the
+settings and statistics look fine, you can then check the client
+settings and client access restrictions before moving on to a capture of
+the network traffic.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-3-02-use-big-ip-tools-in-order-to-identify-potential-performance-issues">
+<h2>Objective - 3.02 Use BIG-IP tools in order to identify potential performance issues<a class="headerlink" href="#objective-3-02-use-big-ip-tools-in-order-to-identify-potential-performance-issues" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>3.02 - Differentiate between performance issue types (i.e. Latency, Congestion, broken content)</strong></p>
+<p><strong>General Network Study</strong></p>
+<p>This blueprint topic is related to choosing the correct answer for a
+scenario type of question. For most questions like these you must have
+exposure to supporting the BIG-IP platform in a production environment
+or understand many of the different issues that may arise around the
+topic and the best practice method of solving the issue. Hands-on study
+is the best way to master these types of topics.</p>
+<p><strong>Latency</strong></p>
+<p>Latency is the largest cause of slow Web applications over the WAN or
+Internet. Latency describes the time delay experienced while a data
+packet moves from one point to another, usually caused by physical
+distance and high round-trip times. Latency can also be introduced by
+compute-intensive processing such as SSL handshaking, bulk
+encryption/decryption, and TCP session management. Latency can have a
+profound effect on application performance, even over networks with
+abundant bandwidth.</p>
+<p><strong>Congestion</strong></p>
+<p>Network congestion occurs a node or network is processing so much data
+that its level of service deteriorates. The BIG-IP platform has some
+built in optimizations to help with network congestion. The TCP profile
+has a setting to enable Nagles algorithm. Nagles algorithm attempts to
+reduce network congestion by aggregating smaller TCP packets into larger
+ones.</p>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>3.02 - Establish the frequency of a given issue (random, continuous, isolated, intermittent, repetitive intervals)</strong></p>
+<p><strong>General Network Study</strong></p>
+<p>This blueprint topic is related to choosing the correct answer for a
+scenario type of question. For most questions like these you must have
+exposure to supporting the BIG-IP platform in a production environment
+or understand many of the different issues that may arise around the
+topic and the best practice method of solving the issue. Hands-on study
+is the best way to master these types of topics.</p>
+<p>Tracking how often issues occur or for how long an issue is impacting a
+function can be a telltale sign to what may be happening. This can be
+done through the use of logs, statistics, network captures and
+observation.</p>
+<p>For instance an administrator wants to load balance a server that is
+already functioning in their DMZ. They spin up a second instance of the
+server and place both the new and old server behind an LTM pair off of
+the DMZ. They use the server’s address on the DMZ network for the
+virtual server address on the LTM and place the servers on a new network
+behind the LTM, with the LTM acting as the servers default gateway. The
+firewall administrators add the new server IP addresses to the rule sets
+allowing all the same server traffic to get to the servers on the new
+network.</p>
+<p>When the servers are brought on-line the users immediately notice a
+delay in the transactions to the server. It seems to be taking about 30
+seconds longer than before and is consistent on every transaction. In
+thinking through the change in architecture, you would not expect that
+the F5 platform introduced a 30 delay with each connection. The time it
+takes for a DNS query to timeout in many systems is around 30 seconds.
+On a deeper look into the logs on the server, it was doing a DNS reverse
+lookup and it was timing out. The firewall admin had not added the new
+network to the DNS rule on the firewall rule set to allow the network
+nodes to query their DNS servers.</p>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>3.02 - Explain how to get performance statistics in addition to the
+those shown in the dashboard (Overview - Performance)</strong></p>
+<p><strong>GUI Study in the vLabs</strong></p>
+<p>To see additional platform performance information, use the following
+steps:</p>
+<p>In version 11.x of the BIG-IP Configuration Utility:</p>
+<ol class="arabic simple">
+<li>Click Statistics.</li>
+<li>Click Performance.</li>
+</ol>
+<p>In version 10.x of the BIG-IP Configuration Utility:</p>
+<ol class="arabic simple">
+<li>Click Overview.</li>
+<li>Click Performance.</li>
+</ol>
+<p>All categories are shown under the <strong>All</strong> tab or you can see the break
+outs of <strong>System</strong>, <strong>Connections</strong>, <strong>Throughput</strong> and <strong>Cache</strong>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+     </div>
+    
+     <div class="row next-prev-btn-row">
+       <div class="col-lg-12">
+       
+        <a href="module2.html" title="Section 2 - Troubleshoot basic hardware issues" accesskey="p" class="btn btn-primary left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+       
+       
+          <a href="module4.html" title="Section 4 - Troubleshoot basic device management connectivity issues" accesskey="n" class="btn btn-primary right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+       
+     </div>
+     </div>
+    
+
+    </article>
+  </div>
+
+</div>
+
+
+  <div id="clouddocs-footer"></div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="../../_static/js/index.js"></script>
+  <script src="../../_static/js/jquery.appear.js"></script>
+  <script src="../../_static/js/printThis.js"></script>
+  <script src="../../_static/js/bootstrap.min.js"></script>
+  <script src="../../_static/js/clouddocs.js"></script>
+  <script src="../../_static/js/CoveoJsSearch.Lazy.min.js"></script>
+  </body>
+</html>

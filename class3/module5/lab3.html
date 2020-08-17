@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<head>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PPZPQ6');</script>
+  <!-- End Google Tag Manager -->
+    <title>Module 3 - Trouble-shooting the BIG-IP</title>
+  
+
+  <meta charset="utf-8">
+  <!-- Twitter Bootstrap viewport setting -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- F5 metadata -->
+  <meta name="title" content="Module 3 - Trouble-shooting the BIG-IP"/>
+  <meta name="product" content="Unofficial - F5 Certification Exam Prep Material"/>
+  <meta name="version" content=""/>
+  <meta name="updated_date"  content="2020-08-16 09:30:35"/>
+  <meta name="archived" content="Archived documents excluded"/>
+  <meta name="doc_type" content="Manual"/>
+  <meta name="lifecycle" content="release"/>
+  <meta name="Unofficial - F5 Certification Exam Prep Material" content=""/>
+
+
+  
+
+  
+  <link href="https://cdn.f5.com/favicon.ico" rel="icon">
+
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Module 3 - Trouble-shooting the BIG-IP &#8212; Unofficial - F5 Certification Exam Prep Material  documentation</title>
+    <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5_agility_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/CoveoFullSearch.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/21fb8a09c3.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Module 4 - Support and Analytics" href="lab4.html" />
+    <link rel="prev" title="Module 2 - Virtual Server and Pool Behavior and Status" href="lab2.html" /> 
+  </head><body>
+  <div id="clouddocs-header"></div>
+
+    <div id="sidebar" class="section-nav">
+      
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
+      <nav class="nav-sidebartoc">
+
+        
+         <h5>Unofficial - F5 Certification Exam Prep Material  </h5>
+        
+
+        <hr>
+        <span class="nav-sidebartoc">
+            <p class="caption"><span class="caption-text">Intro:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Getting Started with the F5 Certification Program 03/29/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 101 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class1/class1.html">F5 101 - App Delivery Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 201 Certification Exam Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../class2/class2.html">F5 201 - TMOS Administration Study Guide 11/01/19</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../class3.html">F5 201 - TMOS Administration Labs 08/11/2020</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 202 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class4/class4.html">F5 202 - Pre-Sales Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301A Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class5/class5.html">F5 301A - BIG-IP LTM Specialist: Architect, Set-Up &amp; Deploy Study Guide 11/01/19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../class6/class6.html">F5 301A - BIG-IP LTM Specialist Labs 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301B Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class7/class7.html">F5 301B - BIG-IP LTM Specialist: Maintain and Troubleshoot Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 302 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class9/class9.html">F5 302 - BIG-IP DNS Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 303 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class11/class11.html">F5 303 - BIG-IP ASM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 304 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class13/class13.html">F5 304 - BIG-IP APM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 401 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class15/class15.html">F5 401 - Security Solution Expert Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 402 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class17/class17.html">F5 402 - Cloud Solutions Study Guide 11/01/19</a></li>
+</ul>
+
+        </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
+<hr>
+  <span class="nav-sidebartoc">
+ <!-- insert content here -->
+  </span>
+      </nav>
+    </div>
+
+
+    <div id="right-sidebar">
+      <h7 style="font-weight:normal">On this page:</h7>
+      <nav class="nav-sidebartoc">
+        <span class="nav-sidebartoc">
+            <ul>
+<li><a class="reference internal" href="#">Module 3 - Trouble-shooting the BIG-IP</a><ul>
+<li><a class="reference internal" href="#trouble-shooting-hardware">Trouble-shooting Hardware</a><ul>
+<li><a class="reference internal" href="#end-user-diagnostics">End User Diagnostics</a></li>
+<li><a class="reference internal" href="#lcd-panel">LCD Panel</a></li>
+<li><a class="reference internal" href="#hardware-log-files">Hardware Log Files</a></li>
+<li><a class="reference internal" href="#ha-and-failover">HA and Failover</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tcpdump-packet-capture">tcpdump Packet Capture</a><ul>
+<li><a class="reference internal" href="#packet-captures-of-multiple-interfaces-simultaneously">Packet Captures of multiple interfaces simultaneously</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#performance-statistics">Performance Statistics</a><ul>
+<li><a class="reference internal" href="#observing-performance-statistics">Observing performance statistics</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#connectivity-troubleshooting">Connectivity Troubleshooting</a><ul>
+<li><a class="reference internal" href="#connectivity-troubleshooting-tools">Connectivity troubleshooting tools</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#self-ip-port-lockdown">Self IP Port Lockdown</a><ul>
+<li><a class="reference internal" href="#effects-of-port-lockdown">Effects of Port Lockdown</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+         </span>
+      </nav>
+    </div>
+
+
+
+
+
+  
+  <div class="main active" id="content" >
+    <article class="docs-container site-article-inner">
+              <!-- custom breadcrumb -->
+        <h5>
+            <a href="../../index.html">Unofficial - F5 Certification Exam Prep Material</a>
+              &gt; <a href="../class3.html">F5 201 - TMOS Administration Labs 08/11/2020</a>
+              &gt; <a href="module7.html">Appendix I - Answer Key</a>
+
+          <span class="right">
+             <a href="../../_sources/class3/module5/lab3.rst.txt" rel="nofollow">Source</a> |
+             <a href="https://github.com/leifbr/f5-agility-labs-cert">Edit on <i class="fa fa-github" aria-hidden="true"></i></a>
+          </span>
+        </h5>
+        <!-- end custom breadcrumb -->
+      
+
+
+    <!--a title="Export PDF" id="export-pdf" class="btn btn btn-link pull-right">View PDF</a-->
+    <button type="button" id="export-pdf" class="btn btn-link right">PDF</button>
+
+
+    
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
+
+
+     <div role="main">
+        
+  <div class="section" id="module-3-trouble-shooting-the-big-ip">
+<h1>Module 3 - Trouble-shooting the BIG-IP<a class="headerlink" href="#module-3-trouble-shooting-the-big-ip" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="trouble-shooting-hardware">
+<h2>Trouble-shooting Hardware<a class="headerlink" href="#trouble-shooting-hardware" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="end-user-diagnostics">
+<h3>End User Diagnostics<a class="headerlink" href="#end-user-diagnostics" title="Permalink to this headline">¶</a></h3>
+<p><em>Q1. What three methods are available for running EUD on F5 Hardware?</em></p>
+<p>USB CDROM, USB Bootable Drive, Hardware Boot Menu</p>
+<p><em>Q2. How do you determine EUD version?</em></p>
+<p>EUD image downloaded or eud_info</p>
+<p><em>Q3. What is the filename and location of the EUD output?</em></p>
+<p>/shared/log/eud.log</p>
+</div>
+<div class="section" id="lcd-panel">
+<h3>LCD Panel<a class="headerlink" href="#lcd-panel" title="Permalink to this headline">¶</a></h3>
+<p><em>Q1. How do you halt the unit via the LCD panel?</em></p>
+<p>Press X, select system menu, press check, select halt, press check to
+confirm</p>
+<p><em>Q2. Holding the X for 4 seconds does what?</em></p>
+<p>Powers down unit</p>
+<p><em>Q3. Holding the Check button for 4 seconds does what?</em></p>
+<p>Reboots the unit</p>
+</div>
+<div class="section" id="hardware-log-files">
+<h3>Hardware Log Files<a class="headerlink" href="#hardware-log-files" title="Permalink to this headline">¶</a></h3>
+<p><em>Q1. What is the filename and location of the logs for LTM?</em></p>
+<p>/var/log/ltm</p>
+<p><em>Q2. Where will power supply, fan and hard disk related issues be logged?</em></p>
+<p>/var/log/ltm</p>
+</div>
+<div class="section" id="ha-and-failover">
+<h3>HA and Failover<a class="headerlink" href="#ha-and-failover" title="Permalink to this headline">¶</a></h3>
+<p><em>Q1. Is failover sometimes used to determine issues related to hardware or software?</em></p>
+<p>hardware</p>
+<p><em>Q2. How do you initiate failover to standby unit?</em></p>
+<p>From Active unit select Network &gt; Traffic Groups, select traffic group, select Force to Standby</p>
+<p><em>Q3. What persistence profile cannot be mirrored?</em></p>
+<p>Cookie persistence is not mirrored</p>
+<p><em>Q4. What two connections types are re-mirrored after failback?</em></p>
+<p>Only FastL4 and SNAT connections are re- mirrored after failback</p>
+<p><em>Q5. When would you recommend using connection mirroring?</em></p>
+<p>Long lived connections</p>
+<p><em>Q6. Where is connection mirroring configured?</em></p>
+<p>You can configure connection mirroring at VS and SNAT</p>
+<p><em>Q7. Where is persistence mirroring configured?</em></p>
+<p>You can configure persistence mirroring at Persistence</p>
+<p><em>Q8. What tmsh command is used to view mirrored connections?</em></p>
+<p>show /ltm persistence persist-records</p>
+<p><em>Q9. What tmsh command is used to view mirrored persistence?.</em></p>
+<p>show /ltm persistence persist-records</p>
+<p><em>Q10. What can be the cause of primary unit returning to active state after initiating failover to standby?</em></p>
+<p>Show /sys connection all-properties</p>
+</div>
+</div>
+<div class="section" id="tcpdump-packet-capture">
+<h2>tcpdump Packet Capture<a class="headerlink" href="#tcpdump-packet-capture" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="packet-captures-of-multiple-interfaces-simultaneously">
+<h3>Packet Captures of multiple interfaces simultaneously<a class="headerlink" href="#packet-captures-of-multiple-interfaces-simultaneously" title="Permalink to this headline">¶</a></h3>
+<p><em>Q1. What is the alternate method for capturing two interfaces
+simultaneously?</em></p>
+<p>tcpdump -ni eth1 -w /var/tmp/dump1.cap <strong>&amp;</strong> tcpdump -ni eth2 -w
+/var/tmp/dump2.cap</p>
+<p><em>Q2. What interface does 0.0 represent?</em></p>
+<p>All interfaces</p>
+<p><em>Q3. What interface typically represents the management interface?</em></p>
+<p>eth0</p>
+<p><em>Q4. What is recommended method for packet captures on high load system?</em></p>
+<p>F5 recommends that you mirror traffic to a dedicated sniffing device</p>
+<p><em>Q5. Will tcpdump capture PVA accelerated traffic?</em></p>
+<p>No, you must disable PVA to capture traffic</p>
+</div>
+</div>
+<div class="section" id="performance-statistics">
+<h2>Performance Statistics<a class="headerlink" href="#performance-statistics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="observing-performance-statistics">
+<h3>Observing performance statistics<a class="headerlink" href="#observing-performance-statistics" title="Permalink to this headline">¶</a></h3>
+<p><em>Q1. What is the longest time interval available for performance
+statistics?</em></p>
+<p>30 Days</p>
+</div>
+</div>
+<div class="section" id="connectivity-troubleshooting">
+<h2>Connectivity Troubleshooting<a class="headerlink" href="#connectivity-troubleshooting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="connectivity-troubleshooting-tools">
+<h3>Connectivity troubleshooting tools<a class="headerlink" href="#connectivity-troubleshooting-tools" title="Permalink to this headline">¶</a></h3>
+<p><em>Q1. Was echo response received?</em></p>
+<p>Ping reply was successful</p>
+<p><em>Q2. What is the status of the virtual servers?</em></p>
+<p>ftp_vs and www_vs available, disabled - wildcard_vs unknown, disabled</p>
+<p><em>Q3. Was echo response received?</em></p>
+<p>Ping reply successful</p>
+</div>
+</div>
+<div class="section" id="self-ip-port-lockdown">
+<h2>Self IP Port Lockdown<a class="headerlink" href="#self-ip-port-lockdown" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="effects-of-port-lockdown">
+<h3>Effects of Port Lockdown<a class="headerlink" href="#effects-of-port-lockdown" title="Permalink to this headline">¶</a></h3>
+<p><em>Q1. Was echo response received?</em></p>
+<p>Ping reply successful</p>
+<p><em>Q2. Was ssh successful? Why not?</em></p>
+<p>No. Port lockdown set to <strong>Allow None</strong> by default</p>
+<p><em>Q3. Was ssh successful?</em></p>
+<p>Yes</p>
+<p><em>Q4. Does existing ssh window still work?</em></p>
+<p>No</p>
+<p><em>Q5. Was new ssh session established?</em></p>
+<p>No</p>
+</div>
+</div>
+</div>
+
+
+     </div>
+    
+     <div class="row next-prev-btn-row">
+       <div class="col-lg-12">
+       
+        <a href="lab2.html" title="Module 2 - Virtual Server and Pool Behavior and Status" accesskey="p" class="btn btn-primary left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+       
+       
+          <a href="lab4.html" title="Module 4 - Support and Analytics" accesskey="n" class="btn btn-primary right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+       
+     </div>
+     </div>
+    
+
+    </article>
+  </div>
+
+</div>
+
+
+  <div id="clouddocs-footer"></div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="../../_static/js/index.js"></script>
+  <script src="../../_static/js/jquery.appear.js"></script>
+  <script src="../../_static/js/printThis.js"></script>
+  <script src="../../_static/js/bootstrap.min.js"></script>
+  <script src="../../_static/js/clouddocs.js"></script>
+  <script src="../../_static/js/CoveoJsSearch.Lazy.min.js"></script>
+  </body>
+</html>

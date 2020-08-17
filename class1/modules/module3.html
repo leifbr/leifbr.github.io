@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<head>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PPZPQ6');</script>
+  <!-- End Google Tag Manager -->
+    <title>Section 3 - Load Balancing Essentials</title>
+  
+
+  <meta charset="utf-8">
+  <!-- Twitter Bootstrap viewport setting -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- F5 metadata -->
+  <meta name="title" content="Section 3 - Load Balancing Essentials"/>
+  <meta name="product" content="Unofficial - F5 Certification Exam Prep Material"/>
+  <meta name="version" content=""/>
+  <meta name="updated_date"  content="2020-08-13 09:31:44"/>
+  <meta name="archived" content="Archived documents excluded"/>
+  <meta name="doc_type" content="Manual"/>
+  <meta name="lifecycle" content="release"/>
+  <meta name="Unofficial - F5 Certification Exam Prep Material" content=""/>
+
+
+  
+
+  
+  <link href="https://cdn.f5.com/favicon.ico" rel="icon">
+
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Section 3 - Load Balancing Essentials &#8212; Unofficial - F5 Certification Exam Prep Material  documentation</title>
+    <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5_agility_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/f5-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/CoveoFullSearch.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/21fb8a09c3.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Section 4 - Security" href="module4.html" />
+    <link rel="prev" title="Section 2 - F5 Solutions and Technology" href="module2.html" /> 
+  </head><body>
+  <div id="clouddocs-header"></div>
+
+    <div id="sidebar" class="section-nav">
+      
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
+      <nav class="nav-sidebartoc">
+
+        
+         <h5>Unofficial - F5 Certification Exam Prep Material  </h5>
+        
+
+        <hr>
+        <span class="nav-sidebartoc">
+            <p class="caption"><span class="caption-text">Intro:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Getting Started with the F5 Certification Program 03/29/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 101 Certification Exam Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../class1.html">F5 101 - App Delivery Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 201 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class2/class2.html">F5 201 - TMOS Administration Study Guide 11/01/19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../class3/class3.html">F5 201 - TMOS Administration Labs 08/11/2020</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 202 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class4/class4.html">F5 202 - Pre-Sales Fundamentals Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301A Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class5/class5.html">F5 301A - BIG-IP LTM Specialist: Architect, Set-Up &amp; Deploy Study Guide 11/01/19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../class6/class6.html">F5 301A - BIG-IP LTM Specialist Labs 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 301B Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class7/class7.html">F5 301B - BIG-IP LTM Specialist: Maintain and Troubleshoot Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 302 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class9/class9.html">F5 302 - BIG-IP DNS Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 303 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class11/class11.html">F5 303 - BIG-IP ASM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 304 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class13/class13.html">F5 304 - BIG-IP APM Specialist Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 401 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class15/class15.html">F5 401 - Security Solution Expert Study Guide 11/01/19</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Unofficial - 402 Certification Exam Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class17/class17.html">F5 402 - Cloud Solutions Study Guide 11/01/19</a></li>
+</ul>
+
+        </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
+<hr>
+  <span class="nav-sidebartoc">
+ <!-- insert content here -->
+  </span>
+      </nav>
+    </div>
+
+
+    <div id="right-sidebar">
+      <h7 style="font-weight:normal">On this page:</h7>
+      <nav class="nav-sidebartoc">
+        <span class="nav-sidebartoc">
+            <ul>
+<li><a class="reference internal" href="#">Section 3 - Load Balancing Essentials</a><ul>
+<li><a class="reference internal" href="#objective-3-01-discuss-the-purpose-of-use-cases-for-and-key-considerations-related-to-load-balancing">Objective - 3.01 Discuss the purpose of, use cases for, and key considerations related to load balancing</a></li>
+<li><a class="reference internal" href="#objective-3-02-differentiate-between-a-client-and-server">Objective - 3.02 Differentiate between a client and server</a></li>
+</ul>
+</li>
+</ul>
+
+         </span>
+      </nav>
+    </div>
+
+
+
+
+
+  
+  <div class="main active" id="content" >
+    <article class="docs-container site-article-inner">
+              <!-- custom breadcrumb -->
+        <h5>
+            <a href="../../index.html">Unofficial - F5 Certification Exam Prep Material</a>
+              &gt; <a href="../class1.html">F5 101 - App Delivery Fundamentals Study Guide 11/01/19</a>
+
+          <span class="right">
+             <a href="../../_sources/class1/modules/module3.rst.txt" rel="nofollow">Source</a> |
+             <a href="https://github.com/leifbr/f5-agility-labs-cert">Edit on <i class="fa fa-github" aria-hidden="true"></i></a>
+          </span>
+        </h5>
+        <!-- end custom breadcrumb -->
+      
+
+
+    <!--a title="Export PDF" id="export-pdf" class="btn btn btn-link pull-right">View PDF</a-->
+    <button type="button" id="export-pdf" class="btn btn-link right">PDF</button>
+
+
+    
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
+
+
+     <div role="main">
+        
+  <div class="section" id="section-3-load-balancing-essentials">
+<h1>Section 3 - Load Balancing Essentials<a class="headerlink" href="#section-3-load-balancing-essentials" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="objective-3-01-discuss-the-purpose-of-use-cases-for-and-key-considerations-related-to-load-balancing">
+<h2>Objective - 3.01 Discuss the purpose of, use cases for, and key considerations related to load balancing<a class="headerlink" href="#objective-3-01-discuss-the-purpose-of-use-cases-for-and-key-considerations-related-to-load-balancing" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>3.01 - Explain the purpose of distribution of load across multiple servers</strong></p>
+<p><strong>Distribution of Load</strong></p>
+<p>The amount of connections and utilization that an application may have
+coming in from its core base of users can often far exceed the
+throughput capacity of a single server hosting the application. The need
+for distributing the inbound requests and processing load of responses
+across a group of servers running the same application or service is
+self-evident. The trick to distributing the load is finding the right
+load balancing solution and then implementing it in the most effective
+manner. While making sure the functions of the applications are not
+being broken as users are sent all across the servers in the group.</p>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>3.01 - Given an environment, determine the appropriate load balancing algorithm that achieves a desired result</strong></p>
+<p><a class="reference external" href="https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/ltm-concepts-11-4-0/5.html?sr=46848886">Link to Online Topic Content</a></p>
+<p><strong>Local Traffic Manager load balancing methods</strong></p>
+<p>There are several load balancing methods available within the BIG-IP
+system for load balancing traffic to pool members.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="64%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>METHOD</strong></td>
+<td><strong>DESCRIPTION</strong></td>
+<td><strong>WHEN TO USE</strong></td>
+</tr>
+<tr class="row-even"><td>Round Robin</td>
+<td>This is the default load balancing method. Round Robin mode passes each new connection request to the next server in line, eventually distributing connections evenly across the array of machines being load balanced.</td>
+<td>Round Robin mode works well in most configurations, especially if the equipment that you are load balancing is roughly equal in processing speed and memory.</td>
+</tr>
+<tr class="row-odd"><td>Ratio (member) Ratio (node)</td>
+<td>Local Traffic Manager distributes connections among pool members or nodes in a static rotation according to ratio weights that you define. In this case, the number of connections that each system receives over time is proportionate to the ratio weight you defined for each pool member or node. You set a ratio weight when you create each pool member or node.</td>
+<td>These are static load balancing methods, basing distribution on user-specified ratio weights that are proportional to the capacity of the servers.</td>
+</tr>
+<tr class="row-even"><td>Dynamic Ratio (member) Dynamic Ratio (node)</td>
+<td><p class="first">The Dynamic Ratio methods select a server based on various aspects of real-time server performance analysis. These methods are similar to the Ratio methods, except that with Dynamic Ratio methods, the ratio weights are system-generated, and the values of the ratio weights are not static. These methods are based on continuous monitoring of the servers, and the ratio weights are therefore continually changing.</p>
+<p class="last"><strong>*Note:</strong> To implement Dynamic Ratio load balancing, you must first install and configure the necessary server software for these systems, and then install the appropriate performance monitor.*</p>
+</td>
+<td>The Dynamic Ratio methods are used specifically for load balancing traffic to RealNetworks RealSystem Server platforms, Windows platforms equipped with Windows Management Instrumentation (WMI), or any server equipped with an SNMP agent such as the UC Davis SNMP agent or Windows 2000 Server SNMP agent.</td>
+</tr>
+<tr class="row-odd"><td>Fastest (node) Fastest (application)</td>
+<td><p class="first">The Fastest methods select a server based on the least number of current sessions. These methods require that you assign both a Layer 7 and a TCP type of profile to the virtual server.</p>
+<p class="last"><strong>*Note:</strong> If the OneConnect feature is enabled, the Least Connections methods do not include idle connections in the calculations when selecting a pool member or node. The Least Connections methods use only active connections in their calculations.*</p>
+</td>
+<td>The Fastest methods are useful in environments where nodes are distributed across separate logical networks.</td>
+</tr>
+<tr class="row-even"><td>Least Connections (member) Least Connections (node)</td>
+<td><p class="first">The Least Connections methods are relatively simple in that Local Traffic Manager passes a new connection to the pool member or node that has the least number of active connections.</p>
+<p class="last"><strong>*Note:</strong> If the OneConnect feature is enabled, the Least Connections methods do not include idle connections in the calculations when selecting a pool member or node. The Least Connections methods use only active connections in their calculations.*</p>
+</td>
+<td>The Least Connections methods function best in environments where the servers have similar capabilities. Otherwise, some amount of latency can occur. For example, consider the case where a pool has two servers of differing capacities, A and B. Server A has 95 active connections with a connection limit of 100, while server B has 96 active connections with a much larger connection limit of 500. In this case, the Least Connections method selects server A, the server with the lowest number of active connections, even though the server is close to reaching capacity. If you have servers with varying capacities, consider using the Weighted Least Connections methods instead.</td>
+</tr>
+<tr class="row-odd"><td>Weighted Least Connections (member) Weighted Least Connections (node)</td>
+<td><p class="first">Like the Least Connections methods, these load balancing methods select pool members or nodes based on the number of active connections. However, the Weighted Least Connections methods also base their selections on server capacity. The Weighted Least Connections (member) method specifies that the system uses the value you specify in Connection Limit to establish a proportional algorithm for each pool member. The system bases the load balancing decision on that proportion and the number of current connections to that pool member. For example, member_a has 20 connections and its connection limit is 100, so it is at 20% of capacity. Similarly, member_b has 20 connections and its connection limit is 200, so it is at 10% of capacity. In this case, the system select selects member_b. This algorithm requires all pool members to have a non-zero connection limit specified. The Weighted Least Connections (node) method specifies that the system uses the value you specify in the node’s Connection Limit setting and the number of current connections to a node to establish a proportional algorithm. This algorithm requires all nodes used by pool members to have a non-zero connection limit specified. If all servers have equal capacity, these load balancing methods behave in the same way as the Least Connections methods.</p>
+<p class="last"><strong>*Note:</strong> If the OneConnect feature is enabled, the Weighted Least Connections methods do not include idle connections in the calculations when selecting a pool member or node. The Weighted Least Connections methods use only active connections in their calculations.*</p>
+</td>
+<td>Weighted Least Connections methods work best in environments where the servers have differing capacities. For example, if two servers have the same number of active connections but one server has more capacity than the other, Local Traffic Manager calculates the percentage of capacity being used on each server and uses that percentage in its calculations.</td>
+</tr>
+<tr class="row-even"><td>Observed (member) Observed (node)</td>
+<td>With the Observed methods, nodes are ranked based on the number of connections. The Observed methods track the number of Layer 4 connections to each node over time and create a ratio for load balancing.</td>
+<td>The need for the Observed methods is rare, and they are not recommended for large pools.</td>
+</tr>
+<tr class="row-odd"><td>Predictive (member) Predictive (node)</td>
+<td>The Predictive methods use the ranking methods used by the Observed methods, where servers are rated according to the number of current connections. However, with the Predictive methods, Local Traffic Manager analyzes the trend of the ranking over time, determining whether a node’s performance is currently improving or declining. The servers with performance rankings that are currently improving, rather than declining, receive a higher proportion of the connections.</td>
+<td>The need for the Predictive methods is rare, and they are not recommend for large pools.</td>
+</tr>
+<tr class="row-even"><td>Least Sessions</td>
+<td><p class="first">The Least Sessions method selects the server that currently has the least number of entries in the persistence table. Use of this load balancing method requires that the virtual server reference a type of profile that tracks persistence connections, such as the Source Address Affinity or Universal profile type.</p>
+<p class="last"><strong>*Note:</strong> The Least Sessions methods are incompatible with cookie persistence.*</p>
+</td>
+<td>The Least Sessions method works best in environments where the servers or other equipment that you are load balancing have similar capabilities.</td>
+</tr>
+<tr class="row-odd"><td>Ratio Least Connections</td>
+<td>The Ratio Least Connections methods cause the system to select the pool member according to the ratio of the number of connections that each pool member has active.</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>3.01 - Explain the concept of persistence</strong></p>
+<p><a class="reference external" href="https://devcentral.f5.com/articles/persistent-and-persistence-whats-the-difference">Link to Online Topic Content</a></p>
+<p><strong>Persistent and Persistence, What’s the Difference?</strong></p>
+<p>While the conceptual basis of persistence and persistent are essentially
+the same, in reality they refer to two different technical concepts.</p>
+<p>Both persistent and persistence relate to the handling of connections.
+The former is often used as a general description of the behavior of
+HTTP and, necessarily, TCP connections, though it is also used in the
+context of database connections. The latter is most often related to
+TCP/HTTP connection handling but almost exclusively in the context of
+load balancing.</p>
+<p><strong>Persistent</strong></p>
+<p>Persistent connections are connections that are kept open and reused.
+The most commonly implemented form of persistent connections is HTTP,
+with database connections a close second.</p>
+<p>Persistent HTTP connections were implemented as part of the HTTP 1.1
+specification as a method of improving the efficiency of HTTP in
+general. Before HTTP 1.1 a browser would generally open one connection
+per object on a page in order to retrieve all the appropriate resources.
+As the number of objects in a page grew, this became increasingly
+inefficient and significantly reduced the capacity of web servers while
+causing browsers to appear slow to retrieve data. HTTP 1.1 and the
+Keep-Alive header in HTTP 1.0 were aimed at improving the performance of
+HTTP by reusing TCP connections to retrieve objects. They made the
+connections persistent such that they could be reused to send multiple
+HTTP requests using the same TCP connection.</p>
+<p>Similarly, this notion was implemented by proxy-based load-balancers as
+a way to improve performance of web applications and increase capacity
+on web servers. Persistent connections between a load-balancer and web
+servers is usually referred to as TCP multiplexing. Just like browsers,
+the load-balancer opens a few TCP connections to the servers and then
+reuses them to send multiple HTTP requests.</p>
+<p>Persistent connections, both in browsers and load-balancers, have
+several advantages:</p>
+<ul class="simple">
+<li>Less network traffic due to less TCP setup/teardown. It requires no
+less than 7 exchanges of data to set up and tear down a TCP
+connection, thus each connection that can be reused reduces the
+number of exchanges required resulting in less traffic.</li>
+<li>Improved performance. Because subsequent requests do not need to
+setup and tear down a TCP connection, requests arrive faster and
+responses are returned quicker. TCP has built-in mechanisms, for
+example window sizing, to address network congestion. Persistent
+connections give TCP the time to adjust itself appropriately to
+current network conditions, thus improving overall performance.
+Non-persistent connections are not able to adjust because they are
+open and almost immediately closed.</li>
+<li>Less server overhead. Servers are able to increase the number of
+concurrent users served because each user requires fewer connections
+through which to complete requests.</li>
+</ul>
+<p><strong>Persistence</strong></p>
+<p>Persistence, on the other hand, is related to the ability of a
+load-balancer or other traffic management solution to maintain a virtual
+connection between a client and a specific server.</p>
+<p>Persistence was often referred to in the application delivery networking
+world as “stickiness” while in the web and application server demesne it
+is called “server affinity”. Persistence ensures that once a client has
+made a connection to a specific server that subsequent requests are sent
+to the same server. This is very important to maintain state and
+session-specific information in some application architectures and for
+handling of SSL- enabled applications. When the first request is seen
+by the load-balancer it chooses a server. On subsequent requests the
+load balancer will automatically choose the same server to ensure
+continuity of the application or, in the case of SSL, to avoid the
+compute intensive process of renegotiation. This persistence is often
+implemented using cookies but can be based on other identifying
+attributes such as IP address. Load-balancers that have evolved into
+application delivery controllers are capable of implementing persistence
+based on any piece of data in the application message (payload),
+headers, or at in the transport protocol (TCP) and network protocol (IP)
+layers.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Some advantages of persistence are:</p>
+<ul class="simple">
+<li>Avoid renegotiation of SSL. By ensuring that SSL enabled connections
+are directed to the same server throughout a session, it is possible
+to avoid renegotiating the keys associated with the session, which is
+compute and resource intensive. This improves performance and reduces
+overhead on servers.</li>
+<li>No need to rewrite applications. Applications developed without load
+balancing in mind may break when deployed in a load-balanced
+architecture because they depend on session data that is stored only
+on the original server on which the session was initiated.
+Load-balancers capable of session persistence ensure that those
+applications do not break by always directing requests to the same
+server, preserving the session data without requiring that
+applications be rewritten.</li>
+</ul>
+<p><strong>Summary</strong></p>
+<p>So persistent connections are connections that are kept open so they can
+be reused to send multiple requests, while persistence is the process of
+ensuring that connections and subsequent requests are sent to the same
+server through a load-balancer or other proxy device.</p>
+<p>Both are important facets of communication between clients, servers, and
+mediators like load-balancers, and increase the overall performance and
+efficiency of the infrastructure as well as improving the end-user
+experience.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="objective-3-02-differentiate-between-a-client-and-server">
+<h2>Objective - 3.02 Differentiate between a client and server<a class="headerlink" href="#objective-3-02-differentiate-between-a-client-and-server" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><strong>3.02 - Given a scenario, identify the client/server</strong></p>
+<p><a class="reference external" href="http://www.differencebetween.com/difference-between-client-and-server-systems/">Link to Online Topic Content</a></p>
+<p><strong>Differences between Server and Client</strong></p>
+<p>Computers are needed in businesses of different sizes. Large computer
+setups that include networks and mainframes are used in large
+businesses. A computer network used in these types of businesses has a
+client- server architecture or two-tier architecture. The main purpose
+of this architecture is the division of labor, which is required in
+large organizations.</p>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>3.02 - Explain the role of a client</strong></p>
+<p><a class="reference external" href="http://www.differencebetween.com/difference-between-client-and-server-systems/">Link to Online Topic Content</a></p>
+<p><strong>Client</strong></p>
+<p>In client- server architecture, the client acts a smaller computer that
+is used by the employees of the organization in order to perform their
+day-to-day activities. The employee uses the client computer in order to
+access the data files or applications stored on the server machine.</p>
+<p>The rights authorized to the client machine can be different. Some
+employees have the access to data files of the organization while other
+may only access the applications present on the server.</p>
+<p>Apart from using the applications and data files, the client machine can
+also utilize the processing power of the server. In this case, the
+client computer is plugged-in to the server and the server machine
+handles all the calculations. In this way, the large processing power of
+the server can be utilized without any addition of hardware on the
+client side.</p>
+<p>The best example of client- server architecture is WWW or World Wide
+Web. Here the client is the browser installed on each computer and the
+information about different pages is stored on the server side from
+which the client or the user can access it.</p>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>3.02 - Explain the role of a server</strong></p>
+<p><a class="reference external" href="http://www.differencebetween.com/difference-between-client-and-server-systems/">Link to Online Topic Content</a></p>
+<p><strong>Server</strong></p>
+<p>In client-server environment, the server computer acts as the “brains”
+of the business. A very large capacity computer is used as a server.
+There can be a mainframe also as it stores a wide variety of
+functionalities and data.</p>
+<p>Generally, applications and data files are stored on the server
+computer. Employee computers or workstations access these applications
+and files across the network. For example, an employee can access
+company’s data files stored on the server, from his/her client computer.</p>
+<p>In some cases, employees may access only specific applications from
+their client machine. Application server is the name given to this type
+of server. The client-server architecture is fully utilized in this type
+of environment as employees have to login from their client machine in
+order to access the application stored on the server. For example, these
+kinds of applications include graphic design programs, spreadsheets and
+word processors. The client- server architecture is illustrated in each
+case.</p>
+<p>Apart from the storage medium, the server also acts as a processing
+power source. The client machines get their processing power from this
+server source. By doing so, no extra hardware for the client is needed
+and it utilizes greater processing power of the server.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Difference between client and server
+• Client is a smaller computer through which the user accesses the information or application stored on the server whereas server is a powerful computer that stores the data files and applications.
+• In some cases, the client may utilize the greater processing power of the server machine.
+• In some cases, the client side may have a better graphical user interface or GUI as compared to the server side.</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3uDzuRZ47FA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+     </div>
+    
+     <div class="row next-prev-btn-row">
+       <div class="col-lg-12">
+       
+        <a href="module2.html" title="Section 2 - F5 Solutions and Technology" accesskey="p" class="btn btn-primary left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+       
+       
+          <a href="module4.html" title="Section 4 - Security" accesskey="n" class="btn btn-primary right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+       
+     </div>
+     </div>
+    
+
+    </article>
+  </div>
+
+</div>
+
+
+  <div id="clouddocs-footer"></div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="../../_static/js/index.js"></script>
+  <script src="../../_static/js/jquery.appear.js"></script>
+  <script src="../../_static/js/printThis.js"></script>
+  <script src="../../_static/js/bootstrap.min.js"></script>
+  <script src="../../_static/js/clouddocs.js"></script>
+  <script src="../../_static/js/CoveoJsSearch.Lazy.min.js"></script>
+  </body>
+</html>
